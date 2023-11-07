@@ -110,6 +110,7 @@
     {"id":{"name":"rm_desertroom2","path":"rooms/rm_desertroom2/rm_desertroom2.yy",},},
     {"id":{"name":"spr_weapon","path":"sprites/spr_weapon/spr_weapon.yy",},},
     {"id":{"name":"Omusicplayer","path":"objects/Omusicplayer/Omusicplayer.yy",},},
+    {"id":{"name":"rm_horrorsaferoom","path":"rooms/rm_horrorsaferoom/rm_horrorsaferoom.yy",},},
     {"id":{"name":"spr_icesuit","path":"sprites/spr_icesuit/spr_icesuit.yy",},},
     {"id":{"name":"spr_heart","path":"sprites/spr_heart/spr_heart.yy",},},
     {"id":{"name":"spr_tank","path":"sprites/spr_tank/spr_tank.yy",},},
@@ -378,6 +379,7 @@
     {"roomId":{"name":"rm_gloomyforest3","path":"rooms/rm_gloomyforest3/rm_gloomyforest3.yy",},},
     {"roomId":{"name":"rm_mansioncellar","path":"rooms/rm_mansioncellar/rm_mansioncellar.yy",},},
     {"roomId":{"name":"rm_mansioncellar_room2","path":"rooms/rm_mansioncellar_room2/rm_mansioncellar_room2.yy",},},
+    {"roomId":{"name":"rm_horrorsaferoom","path":"rooms/rm_horrorsaferoom/rm_horrorsaferoom.yy",},},
   ],
   "templateType": null,
   "TextureGroups": [

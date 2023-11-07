@@ -87,6 +87,7 @@
     {"name":"rm_desertroom2","order":14,"path":"rooms/rm_desertroom2/rm_desertroom2.yy",},
     {"name":"spr_weapon","order":3,"path":"sprites/spr_weapon/spr_weapon.yy",},
     {"name":"Omusicplayer","order":22,"path":"objects/Omusicplayer/Omusicplayer.yy",},
+    {"name":"rm_horrorsaferoom","order":35,"path":"rooms/rm_horrorsaferoom/rm_horrorsaferoom.yy",},
     {"name":"spr_icesuit","order":41,"path":"sprites/spr_icesuit/spr_icesuit.yy",},
     {"name":"spr_heart","order":19,"path":"sprites/spr_heart/spr_heart.yy",},
     {"name":"spr_tank","order":28,"path":"sprites/spr_tank/spr_tank.yy",},
