@@ -62,6 +62,12 @@ enum horrorhand
 move,
 attack
 }
+
+enum horrorturret
+{
+idle,
+attack
+}
 global.maxhp = 3;
 global.x = x;
 global.y = y;
