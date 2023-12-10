@@ -69,7 +69,7 @@
     "name": "tileset_woodplanks",
     "path": "sprites/tileset_woodplanks/tileset_woodplanks.yy",
   },
-  "spriteNoExport": true,
+  "spriteNoExport": false,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",

@@ -69,7 +69,7 @@
     "name": "tileset_darkgloomygrass",
     "path": "sprites/tileset_darkgloomygrass/tileset_darkgloomygrass.yy",
   },
-  "spriteNoExport": true,
+  "spriteNoExport": false,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",

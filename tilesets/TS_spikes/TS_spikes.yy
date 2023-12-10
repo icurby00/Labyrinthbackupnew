@@ -69,7 +69,7 @@
     "name": "tileset_spikes",
     "path": "sprites/tileset_spikes/tileset_spikes.yy",
   },
-  "spriteNoExport": true,
+  "spriteNoExport": false,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",

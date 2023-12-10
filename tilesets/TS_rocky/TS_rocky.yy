@@ -69,7 +69,7 @@
     "name": "tileset_rocky",
     "path": "sprites/tileset_rocky/tileset_rocky.yy",
   },
-  "spriteNoExport": true,
+  "spriteNoExport": false,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",

@@ -69,7 +69,7 @@
     "name": "tileset_dryvines",
     "path": "sprites/tileset_dryvines/tileset_dryvines.yy",
   },
-  "spriteNoExport": true,
+  "spriteNoExport": false,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",

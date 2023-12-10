@@ -69,7 +69,7 @@
     "name": "tileset_water",
     "path": "sprites/tileset_water/tileset_water.yy",
   },
-  "spriteNoExport": true,
+  "spriteNoExport": false,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",

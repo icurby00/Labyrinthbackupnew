@@ -69,7 +69,7 @@
     "name": "tileset_wood",
     "path": "sprites/tileset_wood/tileset_wood.yy",
   },
-  "spriteNoExport": true,
+  "spriteNoExport": false,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",

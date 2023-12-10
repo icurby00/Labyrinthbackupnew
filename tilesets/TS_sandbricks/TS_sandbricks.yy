@@ -69,7 +69,7 @@
     "name": "tile_sandbrick",
     "path": "sprites/tile_sandbrick/tile_sandbrick.yy",
   },
-  "spriteNoExport": true,
+  "spriteNoExport": false,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",

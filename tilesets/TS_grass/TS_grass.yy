@@ -69,7 +69,7 @@
     "name": "tileset_grass",
     "path": "sprites/tileset_grass/tileset_grass.yy",
   },
-  "spriteNoExport": true,
+  "spriteNoExport": false,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",

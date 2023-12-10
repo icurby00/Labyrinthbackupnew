@@ -69,7 +69,7 @@
     "name": "tileset_dirtywater",
     "path": "sprites/tileset_dirtywater/tileset_dirtywater.yy",
   },
-  "spriteNoExport": true,
+  "spriteNoExport": false,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",

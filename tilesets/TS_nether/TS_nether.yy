@@ -69,7 +69,7 @@
     "name": "tileset_nether",
     "path": "sprites/tileset_nether/tileset_nether.yy",
   },
-  "spriteNoExport": true,
+  "spriteNoExport": false,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",

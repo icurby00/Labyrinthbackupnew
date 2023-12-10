@@ -69,7 +69,7 @@
     "name": "tileset_lava",
     "path": "sprites/tileset_lava/tileset_lava.yy",
   },
-  "spriteNoExport": true,
+  "spriteNoExport": false,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",

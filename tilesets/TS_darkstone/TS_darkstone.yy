@@ -69,7 +69,7 @@
     "name": "tileset_darkstone",
     "path": "sprites/tileset_darkstone/tileset_darkstone.yy",
   },
-  "spriteNoExport": true,
+  "spriteNoExport": false,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",

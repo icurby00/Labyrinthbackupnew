@@ -69,7 +69,7 @@
     "name": "tileset_snow",
     "path": "sprites/tileset_snow/tileset_snow.yy",
   },
-  "spriteNoExport": true,
+  "spriteNoExport": false,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",

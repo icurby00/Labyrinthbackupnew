@@ -69,7 +69,7 @@
     "name": "tileset_sand",
     "path": "sprites/tileset_sand/tileset_sand.yy",
   },
-  "spriteNoExport": true,
+  "spriteNoExport": false,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",

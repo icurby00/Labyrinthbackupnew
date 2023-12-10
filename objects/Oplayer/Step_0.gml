@@ -2,13 +2,14 @@
 // You can write your code in this editor
 if global.state = characterstate.normal
 {
-	//move code
+
+//move code
 mv_left = keyboard_check(vk_left) || keyboard_check(ord("A"));
 mv_right = keyboard_check(vk_right) || keyboard_check(ord("D"));
 jumpup = keyboard_check_pressed(vk_space) || keyboard_check_pressed(ord("W")) || keyboard_check_pressed(vk_up);
 dashing = global.can_dash and (keyboard_check_pressed(ord("X")));
-onground = place_meeting(x,y+1, Ograss);
-onwall = place_meeting(x+1,y, Ograss) - place_meeting(x-1,y, Ograss);
+onground = place_meeting(x,y+1, [ground1, ground2, ground3, ground4, Ograss]);
+onwall = place_meeting(x+1,y, [ground1, ground2, ground3, ground4, Ograss]) - place_meeting(x-1,y, [ground1, ground2, ground3, ground4, Ograss]);
 var move = mv_right - mv_left;
 hsp = move * walkspd;
 vsp = vsp + grv;
@@ -21,7 +22,7 @@ if move != 0
 }
 //wall jump
 
-if not grounded and global.can_wall_jump and place_meeting(x + facing_dir, y, Ograss)
+if not grounded and global.can_wall_jump and place_meeting(x + facing_dir, y, [ground1, ground2, ground3, ground4, Ograss])
 {
 	sprite_index = spr_player_wall_slide;
 	wall_jump = true;
@@ -63,9 +64,9 @@ if jumpup and (grounded or wall_jump)
 if already_walljumping
 {
 	wj_move = walkspd * facing_dir;
-	if (place_meeting(x + wj_move, y, Ograss))
+	if (place_meeting(x + wj_move, y, [ground1, ground2, ground3, ground4, Ograss]))
 	{
-		while (!place_meeting(x + sign(wj_move), y, Ograss))
+		while (!place_meeting(x + sign(wj_move), y, [ground1, ground2, ground3, ground4, Ograss]))
 		{
 			x += sign(wj_move);
 		}
@@ -92,9 +93,9 @@ if already_dashing and not dash_recharging
 	grv = 0;
 	
 	dash_move = dash_speed * facing_dir;
-	if ( place_meeting ( x+dash_move, y, Ograss ) )
+	if ( place_meeting ( x+dash_move, y, [ground1, ground2, ground3, ground4, Ograss] ) )
 	{
-		while ( not place_meeting ( x+sign(dash_move), y, Ograss ) )
+		while ( not place_meeting ( x+sign(dash_move), y, [ground1, ground2, ground3, ground4, Ograss] ) )
 		{
 			x += sign(dash_move);
 		}
@@ -112,9 +113,9 @@ if already_dashing and not dash_recharging
 	}
 }
 	// collide
-if (place_meeting(x+hsp,y,Ograss))
+if (place_meeting(x+hsp,y, [ground1, ground2, ground3, ground4, Ograss]))
 {
-	while (!place_meeting(x+sign(hsp),y,Ograss))
+	while (!place_meeting(x+sign(hsp),y, [ground1, ground2, ground3, ground4, Ograss]))
 	{
 		x = x + sign(hsp);
 	}
@@ -124,9 +125,9 @@ x = x + hsp;
 
 
 //Vertical Collison
-if (place_meeting(x,y+vsp,Ograss))
+if (place_meeting(x,y+vsp, [ground1, ground2, ground3, ground4, Ograss]))
 {
-	while (!place_meeting(x,y+sign(vsp),Ograss))
+	while (!place_meeting(x,y+sign(vsp), [ground1, ground2, ground3, ground4, Ograss]))
 	{
 		y = y + sign(vsp);
 	}
@@ -283,9 +284,9 @@ if (global.state = characterstate.swimming) && (in_water)
 	image_xscale = facing_dir;
 	direction = point_direction(x, y, x + move, y);
 }
-if (place_meeting(x+hsp,y,Ograss))
+if (place_meeting(x+hsp,y, [ground1, ground2, ground3, ground4, Ograss]))
 {
-	while (!place_meeting(x+sign(hsp),y,Ograss))
+	while (!place_meeting(x+sign(hsp),y, [ground1, ground2, ground3, ground4, Ograss]))
 	{
 		x = x + sign(hsp);
 	}
@@ -295,9 +296,9 @@ x = x + hsp;
 
 
 //Vertical Collison
-if (place_meeting(x,y+vsp,Ograss))
+if (place_meeting(x,y+vsp, [ground1, ground2, ground3, ground4, Ograss]))
 {
-	while (!place_meeting(x,y+sign(vsp),Ograss))
+	while (!place_meeting(x,y+sign(vsp), [ground1, ground2, ground3, ground4, Ograss]))
 	{
 		y = y + sign(vsp);
 	}

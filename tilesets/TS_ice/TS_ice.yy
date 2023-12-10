@@ -69,7 +69,7 @@
     "name": "tileset_ice",
     "path": "sprites/tileset_ice/tileset_ice.yy",
   },
-  "spriteNoExport": true,
+  "spriteNoExport": false,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",

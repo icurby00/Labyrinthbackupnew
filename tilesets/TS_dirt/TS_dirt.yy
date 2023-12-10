@@ -69,7 +69,7 @@
     "name": "tileset_dirt",
     "path": "sprites/tileset_dirt/tileset_dirt.yy",
   },
-  "spriteNoExport": true,
+  "spriteNoExport": false,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",

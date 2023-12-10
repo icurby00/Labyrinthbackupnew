@@ -69,7 +69,7 @@
     "name": "tileset_vine",
     "path": "sprites/tileset_vine/tileset_vine.yy",
   },
-  "spriteNoExport": true,
+  "spriteNoExport": false,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
