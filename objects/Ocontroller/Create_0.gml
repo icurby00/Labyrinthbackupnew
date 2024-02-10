@@ -68,6 +68,24 @@ enum horrorturret
 idle,
 attack
 }
+enum horrorboss
+{
+idle,
+attack,
+recovery
+}
+enum horrorboss_phase1
+{
+idle,
+attack,
+recovery
+}
+enum horrorboss_phase2
+{
+	idle,
+	attack
+}
+
 global.maxhp = 3;
 global.x = x;
 global.y = y;
@@ -77,16 +95,23 @@ global.can_dash = false;
 global.can_wall_jump = false;
 global.can_doublejump = false;
 global.redbullets = false;
+global.greenbullets = false;
 global.currentroom = noone;
 global.snorkel = false;
 global.ice_suit = false;
 global.prosuit = false;
 global.state = characterstate.normal;
 global.levelchange = false;
-
+global.lose = false;
 // weapon data
 global.bullettype = Obullet;
-
+// sequence states
+enum seqstate
+{
+	Notplaying,
+	Playing,
+	Finished
+}
 
 // bosses defeated 
 global.Oboss_air = 1;
@@ -98,3 +123,7 @@ global.Oboss_phase3 = 1;
 
 global.Oboss_desert = 1;
 
+global.Oboss_horror = 1;
+
+global.Oboss_horror_phase1 = 1;
+global.Oboss_horror_phase2 = 1;

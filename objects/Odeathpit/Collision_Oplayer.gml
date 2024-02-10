@@ -3,4 +3,4 @@
 var near = instance_nearest(other.x, other.y, Pcheckpoint);
 
 other.x = near.x;
-other.y  = near.y-15;
+other.y  = near.y-20;

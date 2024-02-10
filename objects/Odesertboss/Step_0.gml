@@ -7,7 +7,7 @@ switch(state)
 		if (alarm[0] == -1) {
 			alarm[0] = room_speed * 5;
 		}
-		
+		break;
 		
 	}
 	case desert_boss.movement:
@@ -35,7 +35,7 @@ else
 			alarm[1] = room_speed;
 		}
 		
-		
+		break;
 	}
 	case desert_boss.shooting:
 	{
@@ -50,14 +50,14 @@ else
         }
         if(energy == 0) && (alarm[2] == -1) alarm[2] = room_speed;
 		
-		
+break;
 	}
 	case desert_boss.idle:
 	{
 		if (alarm[4] == -1) {
 			alarm[4] = room_speed * 3;
 		}
-		
+		break;
 		}
 		
 		

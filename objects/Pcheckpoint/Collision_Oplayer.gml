@@ -20,6 +20,9 @@ ini_write_real("boss", "bossphase1", global.Oboss_phase1);
 ini_write_real("boss", "bossphase2", global.Oboss_phase2);
 ini_write_real("boss", "bossphase3", global.Oboss_phase3);
 ini_write_real("boss","desertboss", global.Oboss_desert);
+ini_write_real("boss", "horrorboss", global.Oboss_horror);
+ini_write_real("boss", "horrorboss_phase1", global.Oboss_horror_phase1);
+ini_write_real("boss", "horrorboss_phase2", global.Oboss_horror_phase2);
 ini_write_real("level", "levelchange", global.levelchange);
 ini_close();
 

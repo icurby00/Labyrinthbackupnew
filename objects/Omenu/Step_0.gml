@@ -30,7 +30,7 @@ if (menu_x > gui_width+150) && (menu_committed != -1)
 {
 	switch (menu_committed)
 	{
-		case 2: room_goto(rm_grassland); file_delete("Labyrinth.sav"); file_delete("Labyrinth.ini"); break;
+		case 2: room_goto(rm_grassland); file_delete("Labyrinth.sav"); file_delete("Labyrinth.ini"); global.hp = 3; break;
 		case 1: if(!file_exists("Labyrinth.sav"))
 		{
 			room_goto(rm_grassland);
@@ -58,6 +58,9 @@ if (menu_x > gui_width+150) && (menu_committed != -1)
 			global.Oboss_phase2 = ini_read_real("boss", "bossphase2", 1);
 			global.Oboss_phase3 = ini_read_real("boss", "bossphase3", 1);
 			global.Oboss_desert = ini_read_real("boss","desertboss", 1);
+			global.Oboss_horror = ini_read_real("boss", "horrorboss", 1);
+			global.Oboss_horror_phase1 = ini_read_real("boss", "horrorboss_phase1",1);
+			global.Oboss_horror_phase2 = ini_read_real("boss", "horrorboss_phase2",1);
 			global.levelchange = ini_read_real("level","levelchange",false);
 			ini_close();
 			room_goto(global.currentroom);

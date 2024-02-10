@@ -2,7 +2,8 @@
 // You can write your code in this editor
 with (other)
 {
-	hp = -2;
+	
+	hp = hp -2;
 	flash = 3;
 	
 	
