@@ -6,3 +6,11 @@ if (place_meeting(x,y,Pbullets))
 	image_index = 1;
 	global.pathopen = true;
 }
+
+if (place_meeting(x,y,Pbullets)) && global.pathopen = true
+{
+	image_speed = 0;
+	image_index = 0;
+	global.pathopen = false;
+	
+}

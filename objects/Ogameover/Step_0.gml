@@ -75,6 +75,7 @@ if (menu_x > gui_width+300) && (menu_committed != -1)
 		{
 			room_goto(rm_titlescreen);
 			instance_destroy(Oplayer);
+			instance_destroy(Oweapon);
 			instance_destroy(Ogameover);
 			global.lose = false;
 		}
