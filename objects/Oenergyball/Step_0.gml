@@ -13,9 +13,9 @@ if (limit_speed)
 var near =  instance_nearest(x,y,Oplayer);
 move_towards_point(near.x,near.y,1);
 	// collide
-if (place_meeting(x+hsp,y,Ograss))
+if (place_meeting(x+hsp,y,[ground1, ground2, ground3, ground4, Ograss]))
 {
-	while (!place_meeting(x+sign(hsp),y,Ograss))
+	while (!place_meeting(x+sign(hsp),y,[ground1, ground2, ground3, ground4, Ograss]))
 	{
 		x = x + sign(hsp);
 	}
@@ -24,9 +24,9 @@ if (place_meeting(x+hsp,y,Ograss))
 x = x + hsp;
 
 // collide
-if (place_meeting(x+hsp,y,Ograss))
+if (place_meeting(x+hsp,y,[ground1, ground2, ground3, ground4, Ograss]))
 {
-	while (!place_meeting(x+sign(hsp),y,Ograss))
+	while (!place_meeting(x+sign(hsp),y,[ground1, ground2, ground3, ground4, Ograss]))
 	{
 		x = x + sign(hsp);
 	}
@@ -34,9 +34,9 @@ if (place_meeting(x+hsp,y,Ograss))
 }
 x = x + hsp;
 //Vertical Collison
-if (place_meeting(x,y+vsp,Ograss))
+if (place_meeting(x,y+vsp,[ground1, ground2, ground3, ground4, Ograss]))
 {
-	while (!place_meeting(x,y+sign(vsp),Ograss))
+	while (!place_meeting(x,y+sign(vsp),[ground1, ground2, ground3, ground4, Ograss]))
 	{
 		y = y + sign(vsp);
 	}

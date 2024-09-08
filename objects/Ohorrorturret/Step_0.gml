@@ -26,9 +26,9 @@ switch(state)
 }
 
 //Vertical Collison
-if (place_meeting(x,y+vsp,Ograss))
+if (place_meeting(x,y+vsp,[ground1, ground2, ground3, ground4, Ograss]))
 {
-	while (!place_meeting(x,y+sign(vsp),Ograss))
+	while (!place_meeting(x,y+sign(vsp),[ground1, ground2, ground3, ground4, Ograss]))
 	{
 		y = y + sign(vsp);
 	}

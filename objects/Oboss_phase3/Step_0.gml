@@ -30,9 +30,9 @@ switch (state)
 if (hsp != 0 ) image_xscale = sign(hsp);
 vsp = vsp + grv;
 	// collide
-if (place_meeting(x+hsp,y,Ograss) or (place_meeting(x+hsp,y,Oenemyblock)))
+if (place_meeting(x+hsp,y,[ground1, ground2, ground3, ground4, Ograss]) or (place_meeting(x+hsp,y,Oenemyblock)))
 {
-	while (!place_meeting(x+sign(hsp),y,Ograss) and (!place_meeting(x+sign(hsp),y,Oenemyblock)))
+	while (!place_meeting(x+sign(hsp),y,[ground1, ground2, ground3, ground4, Ograss]) and (!place_meeting(x+sign(hsp),y,Oenemyblock)))
 	{
 		x = x + sign(hsp);
 	}
@@ -42,9 +42,9 @@ x = x + hsp;
 
 
 //Vertical Collison
-if (place_meeting(x,y+vsp,Ograss))
+if (place_meeting(x,y+vsp,[ground1, ground2, ground3, ground4, Ograss]))
 {
-	while (!place_meeting(x,y+sign(vsp),Ograss))
+	while (!place_meeting(x,y+sign(vsp),[ground1, ground2, ground3, ground4, Ograss]))
 	{
 		y = y + sign(vsp);
 	}

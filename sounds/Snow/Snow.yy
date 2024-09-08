@@ -2,8 +2,8 @@
   "$GMSound":"",
   "%Name":"Snow",
   "audioGroupId":{
-    "name":"audiogroup_default",
-    "path":"audiogroups/audiogroup_default",
+    "name":"audiolevel",
+    "path":"audiogroups/audiolevel",
   },
   "bitDepth":1,
   "bitRate":128,

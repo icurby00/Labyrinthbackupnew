@@ -17,7 +17,7 @@ switch (state)
 		vsp += grv;
 		
 		if (alarm[1] == -1) {
-			if (place_meeting(x,y +1, Ograss)){
+			if (place_meeting(x,y +1, [ground1, ground2, ground3, ground4, Ograss])){
 				alarm[1] = room_speed;
 				
 			}
@@ -32,7 +32,7 @@ switch (state)
 		vsp += -grv;
 		vsp = clamp(vsp, -2, 0);
 		
-		if (place_meeting(x, y - 1, Ograss)) state = crusherstate.waiting;
+		if (place_meeting(x, y - 1, [ground1, ground2, ground3, ground4, Ograss])) state = crusherstate.waiting;
 		
 		break;
 	}
@@ -42,9 +42,9 @@ switch (state)
 	
 }
 //Vertical Collison
-if (place_meeting(x,y+vsp,Ograss))
+if (place_meeting(x,y+vsp,[ground1, ground2, ground3, ground4, Ograss]))
 {
-	while (!place_meeting(x,y+sign(vsp),Ograss))
+	while (!place_meeting(x,y+sign(vsp),[ground1, ground2, ground3, ground4, Ograss]))
 	{
 		y = y + sign(vsp);
 	}

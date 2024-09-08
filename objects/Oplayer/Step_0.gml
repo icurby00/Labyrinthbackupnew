@@ -159,12 +159,15 @@ if (!onground)
 			hspeed = -other.onwall*0.5;
 		}
 	}
-	else
+	else if (vsp < 0)
 	{
 	dust = 0;
 	sprite_index = spr_player_jump;
-	image_speed = 0;
-	if (sign(vsp) > 0) image_index = 1; else image_index = 0;
+	image_speed = 1;
+	} else {
+		dust = 0;
+		sprite_index = spr_player_fall;
+		image_speed  = 1;
 	}
 }
 else
