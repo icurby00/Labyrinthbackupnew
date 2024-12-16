@@ -63,6 +63,7 @@ if (menu_x > gui_width+300) && (menu_committed != -1)
 			room_restart();
 			global.hp = global.maxhp;
 			global.lose = false;
+			global.cutscene = false;
 			instance_activate_object(pEnemy);
 			instance_activate_object(Oplayer);
 			instance_activate_object(Oweapon);
@@ -94,6 +95,7 @@ if (global.lose = true && sequenceState = seqstate.Notplaying)
 	instance_deactivate_object(pEnemy);
 	instance_deactivate_object(Oplayer);
 	instance_deactivate_object(Oweapon);
+	instance_deactivate_object(pSigns);
 
 	if (alarm[0] == -1) {
 			alarm[0] = room_speed;

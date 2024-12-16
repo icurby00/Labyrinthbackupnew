@@ -30,7 +30,7 @@ if (menu_x > gui_width+150) && (menu_committed != -1)
 {
 	switch (menu_committed)
 	{
-		case 2: room_goto(rm_grassland); file_delete("Labyrinth.sav"); file_delete("Labyrinth.ini"); global.hp = 3; break;
+		case 2: room_goto(rm_iceberg_inside2); file_delete("Labyrinth.sav"); file_delete("Labyrinth.ini"); global.hp = 3; break;
 		case 1: if(!file_exists("Labyrinth.sav"))
 		{
 			room_goto(rm_grassland);

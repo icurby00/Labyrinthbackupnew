@@ -16,6 +16,7 @@ switch (event_data[? "message"])
 		sequenceState = seqstate.Finished;
 		instance_activate_object(Oplayer);
 		instance_activate_object(Oweapon);
+		instance_activate_object(pSigns);
 		show_debug_message("Ogameover has stopped playing "+string(curSeq));
 	} break;
 }

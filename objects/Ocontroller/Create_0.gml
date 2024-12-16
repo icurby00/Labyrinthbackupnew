@@ -85,6 +85,15 @@ enum horrorboss_phase2
 	idle,
 	attack
 }
+enum BOSS_ROBOT_WORM_PHASE1
+{
+	idle,
+	movement,
+	attack1,
+	attack2,
+	recovery
+	
+}
 
 global.maxhp = 3;
 global.x = x;
@@ -103,6 +112,7 @@ global.prosuit = false;
 global.state = characterstate.normal;
 global.levelchange = false;
 global.lose = false;
+global.cutscene = false;
 // weapon data
 global.bullettype = Obullet;
 // sequence states
@@ -110,6 +120,13 @@ enum seqstate
 {
 	Notplaying,
 	Playing,
+	Finished
+}
+
+enum cutscene_boss
+{
+	Notplaying_scene,
+	Playing_scene,
 	Finished
 }
 
