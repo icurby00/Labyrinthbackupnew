@@ -94,6 +94,14 @@ enum BOSS_ROBOT_WORM_PHASE1
 	recovery
 	
 }
+enum BOSS_ROBOT_WORM_PHASE2
+{
+	idle,
+	movement,
+	attack1,
+	attack2,
+	recovery
+}
 
 global.maxhp = 3;
 global.x = x;
@@ -105,6 +113,7 @@ global.can_wall_jump = false;
 global.can_doublejump = false;
 global.redbullets = false;
 global.greenbullets = false;
+global.icebullets = false;
 global.currentroom = noone;
 global.snorkel = false;
 global.ice_suit = false;
@@ -144,3 +153,6 @@ global.Oboss_horror = 1;
 
 global.Oboss_horror_phase1 = 1;
 global.Oboss_horror_phase2 = 1;
+
+global.worm_boss_phase1 = 1;
+global.worm_boss_phase2 = 1;

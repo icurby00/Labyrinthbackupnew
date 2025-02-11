@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 vsp = 0;
-grv = 0.3;
+grv = 0.6;
 walkspd = 8;
 hsp = walkspd;
 hp = 750;
@@ -16,3 +16,4 @@ GroundId3 = layer_get_id("Tiles_3");
 ground3 = layer_tilemap_get_id(GroundId3);
 GroundId4 = layer_get_id("Tiles_4");
 ground4 = layer_tilemap_get_id(GroundId4)
+path_start(Path3,12,path_action_stop,true)

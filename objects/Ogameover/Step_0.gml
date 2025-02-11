@@ -45,6 +45,8 @@ if (menu_x > gui_width+300) && (menu_committed != -1)
 			global.can_dash = ini_read_real("player", "playerdash", false);
 			global.can_doublejump = ini_read_real("player", "playerdoublejump", false);
 			global.redbullets = ini_read_real("player", "playerredbullet", false);
+			global.greenbullets = ini_read_real("player", "playergreenbullet",false);
+			global.icebullets = ini_read_real("player", "playericebullet",false);
 			global.bullettype = ini_read_real("weapon", "weaponbullettype", false);
 			global.snorkel = ini_read_real("player", "playerwater", false);
 			global.ice_suit = ini_read_real("player", "playersuit", false);
@@ -58,6 +60,8 @@ if (menu_x > gui_width+300) && (menu_committed != -1)
 			global.Oboss_horror = ini_read_real("boss", "horrorboss", 1);
 			global.Oboss_horror_phase1 = ini_read_real("boss", "horrorboss_phase1", 1);
 			global.Oboss_horror_phase2 = ini_read_real("boss", "horrorboss_phase2",1);
+			global.worm_boss_phase1 = ini_read_real("boss", "robot_worm_phase1", 1);
+			global.worm_boss_phase2 = ini_read_real("boss", "robot_worm_phase2",1);
 			global.levelchange = ini_read_real("level","levelchange",false);
 			ini_close();
 			room_restart();

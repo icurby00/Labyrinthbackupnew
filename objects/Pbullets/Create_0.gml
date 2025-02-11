@@ -8,7 +8,8 @@ GroundId3 = layer_get_id("Tiles_3");
 ground3 = layer_tilemap_get_id(GroundId3);
 GroundId4 = layer_get_id("Tiles_4");
 ground4 = layer_tilemap_get_id(GroundId4);
-
+WaterID1 = layer_get_id("Ice_Water")
+icewater = layer_tilemap_get_id(WaterID1);
 
 
 

@@ -30,7 +30,7 @@ if (menu_x > gui_width+150) && (menu_committed != -1)
 {
 	switch (menu_committed)
 	{
-		case 2: room_goto(rm_iceberg_inside2); file_delete("Labyrinth.sav"); file_delete("Labyrinth.ini"); global.hp = 3; break;
+		case 2: room_goto(rm_grassland); file_delete("Labyrinth.sav"); file_delete("Labyrinth.ini"); global.hp = 3; break;
 		case 1: if(!file_exists("Labyrinth.sav"))
 		{
 			room_goto(rm_grassland);
@@ -47,6 +47,8 @@ if (menu_x > gui_width+150) && (menu_committed != -1)
 			global.currentroom = ini_read_real("player", "room", false);
 			global.can_doublejump = ini_read_real("player", "playerdoublejump", false);
 			global.redbullets = ini_read_real("player", "playerredbullet", false);
+			global.greenbullets = ini_read_real("player", "playergreenbullet",false);
+			global.icebullets = ini_read_real("player", "playericebullet",false);
 			global.snorkel = ini_read_real("player", "playerwater", false);
 			global.ice_suit = ini_read_real("player", "playersuit", false);
 			global.prosuit = ini_read_real("player", "playerprosuit", false);
@@ -61,6 +63,8 @@ if (menu_x > gui_width+150) && (menu_committed != -1)
 			global.Oboss_horror = ini_read_real("boss", "horrorboss", 1);
 			global.Oboss_horror_phase1 = ini_read_real("boss", "horrorboss_phase1",1);
 			global.Oboss_horror_phase2 = ini_read_real("boss", "horrorboss_phase2",1);
+			global.worm_boss_phase1 = ini_read_real("boss", "robot_worm_phase1", 1);
+			global.worm_boss_phase2 = ini_read_real("boss", "robot_worm_phase2",1);
 			global.levelchange = ini_read_real("level","levelchange",false);
 			ini_close();
 			room_goto(global.currentroom);
