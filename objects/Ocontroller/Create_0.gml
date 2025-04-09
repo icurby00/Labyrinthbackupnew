@@ -116,12 +116,14 @@ global.greenbullets = false;
 global.icebullets = false;
 global.currentroom = noone;
 global.snorkel = false;
+global.lavaproofsuit = false;
 global.ice_suit = false;
 global.prosuit = false;
 global.state = characterstate.normal;
 global.levelchange = false;
 global.lose = false;
 global.cutscene = false;
+global.background_change = false;
 // weapon data
 global.bullettype = Obullet;
 // sequence states

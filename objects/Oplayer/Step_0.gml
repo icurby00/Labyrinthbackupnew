@@ -214,6 +214,25 @@ if (global.snorkel = false) && tilemap_get_at_pixel(tiles,x,y)
 			global.state = ini_read_real("player", "playerstate", characterstate.normal);
 			ini_close();
 }
+if (global.snorkel = true) & global.lavaproofsuit = false && tilemap_get_at_pixel(tiles4,x,y) 
+{
+	ini_open("Labyrinth.ini");
+			x = ini_read_real("player", "x", x);
+			y = ini_read_real("player", "y", y);
+			global.hp = ini_read_real("player", "hp", 3);
+			global.player_has_gun = ini_read_real("player", "playergun", false);
+			global.can_wall_jump = ini_read_real("player", "playerwalljump", false);
+			global.can_dash = ini_read_real("player", "playerdash", false);
+			global.can_doublejump = ini_read_real("player", "playerdoublejump", false);
+			global.redbullets = ini_read_real("player", "playerredbullet", false);
+			global.bullettype = ini_read_real("weapon", "weaponbullettype", false);
+			global.snorkel = ini_read_real("player", "playerwater", false);
+			global.ice_suit = ini_read_real("player", "playersuit", false);
+			global.prosuit = ini_read_real("player", "playerprosuit", false);
+			global.state = ini_read_real("player", "playerstate", characterstate.normal);
+			ini_close();
+			hp = hp -1;
+}
 if (global.snorkel = true) && (global.ice_suit = true) && tilemap_get_at_pixel(tiles2,x,y) 
 {
 	global.state = characterstate.swimming;

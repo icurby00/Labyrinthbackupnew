@@ -42,8 +42,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_robot_worm_boss",
-    "path":"sprites/spr_robot_worm_boss/spr_robot_worm_boss.yy",
+    "name":"spr_robot_worm_boss_phase2",
+    "path":"sprites/spr_robot_worm_boss_phase2/spr_robot_worm_boss_phase2.yy",
   },
   "spriteMaskId":null,
   "visible":true,

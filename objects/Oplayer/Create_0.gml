@@ -46,5 +46,7 @@ layerID2 = layer_get_id("Ice_water");
 tiles2 = layer_tilemap_get_id(layerID2);
 layerID3 = layer_get_id("Dirty_water");
 tiles3 = layer_tilemap_get_id(layerID3);
+LayerID4 = layer_get_id("Lava");
+tiles4 = layer_tilemap_get_id(LayerID4);
 grv_swim = 0;
 in_water = false;
