@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":1,
   "conversionMode":0,
-  "duration":109.714294,
+  "duration":109.71431,
   "name":"MansionCellar",
   "parent":{
     "name":"Sounds",

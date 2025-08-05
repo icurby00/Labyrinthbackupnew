@@ -27,6 +27,7 @@ ini_write_real("boss", "horrorboss_phase1", global.Oboss_horror_phase1);
 ini_write_real("boss", "horrorboss_phase2", global.Oboss_horror_phase2);
 ini_write_real("boss", "robot_worm_phase1", global.worm_boss_phase1);
 ini_write_real("boss", "robot_worm_phase2", global.worm_boss_phase2);
+ini_write_real("boss", "robot_worm_phase3", global.worm_boss_phase3);
 ini_write_real("level", "levelchange", global.levelchange);
 ini_close();
 

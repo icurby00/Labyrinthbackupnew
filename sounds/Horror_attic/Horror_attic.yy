@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":1,
   "conversionMode":0,
-  "duration":43.636375,
+  "duration":43.636395,
   "name":"Horror_attic",
   "parent":{
     "name":"Sounds",

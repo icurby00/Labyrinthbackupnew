@@ -1,3 +1,3 @@
 /// @description Insert description here
 // You can write your code in this editor
-state = BOSS_ROBOT_WORM_PHASE1.attack1;
+state = BOSS_ROBOT_WORM_PHASE2.attack1;

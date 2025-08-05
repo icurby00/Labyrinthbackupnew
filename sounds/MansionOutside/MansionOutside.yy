@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":1,
   "conversionMode":0,
-  "duration":54.857147,
+  "duration":54.857166,
   "name":"MansionOutside",
   "parent":{
     "name":"Sounds",

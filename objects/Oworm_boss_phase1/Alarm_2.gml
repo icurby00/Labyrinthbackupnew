@@ -1,3 +1,3 @@
 /// @description Insert description here
 // You can write your code in this editor
-state = BOSS_ROBOT_WORM_PHASE1.recovery;
+state = BOSS_ROBOT_WORM_PHASE1.movement2;

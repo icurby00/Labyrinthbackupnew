@@ -14,7 +14,7 @@ switch(state)
 	{ 	
 		if (!place_meeting(x,y+1, [ground1, ground2, ground3, ground4, Ograss]))
 {
-	sprite_index = spr_desertboss
+	sprite_index = spr_robot_worm_boss_phase2;
 	image_speed = 0;
 	if (sign(vsp) > 0) image_index = 1; else image_index = 0;
 }
@@ -23,11 +23,11 @@ else
 	image_speed = 1;
 	if (hsp == 0)
 	{
-		sprite_index = spr_desertboss;
+		sprite_index = spr_robot_worm_boss_phase2
 	}
 	else
 	{
-		sprite_index = spr_desertbossmove;
+		sprite_index = spr_robot_worm_boss_phase2
 	}
 	
 }
@@ -61,7 +61,7 @@ if (place_meeting(x+hsp,y, [ground1, ground2, ground3, ground4, Ograss]))
 	{
 		x = x + sign(hsp);
 	}
-	hsp = 0;
+	hsp = -hsp;
 }
 x = x + hsp;
 
@@ -89,7 +89,7 @@ if (hsp != 0 ) image_xscale = sign(hsp);
 	{
 		x = x + sign(hsp);
 	}
-	hsp = 0;
+	hsp = -hsp;
 	}
 	x = x + hsp;
 

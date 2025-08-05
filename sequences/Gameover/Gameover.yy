@@ -1,5 +1,5 @@
 {
-  "$GMSequence":"",
+  "$GMSequence":"v1",
   "%Name":"Gameover",
   "autoRecord":true,
   "backdropHeight":250,

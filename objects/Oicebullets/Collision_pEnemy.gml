@@ -3,7 +3,7 @@
 with (other)
 {
 	hp = hp -4;
-	walkspd = walkspd = walkspd -0.50;
+	walkspd = walkspd = walkspd -0.05;
 	flash = 3;
 	
 	

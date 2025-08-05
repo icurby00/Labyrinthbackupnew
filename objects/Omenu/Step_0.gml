@@ -65,6 +65,7 @@ if (menu_x > gui_width+150) && (menu_committed != -1)
 			global.Oboss_horror_phase2 = ini_read_real("boss", "horrorboss_phase2",1);
 			global.worm_boss_phase1 = ini_read_real("boss", "robot_worm_phase1", 1);
 			global.worm_boss_phase2 = ini_read_real("boss", "robot_worm_phase2",1);
+			global.worm_boss_phase3 = ini_read_real("boss", "robot_worm_phase3", 1);
 			global.levelchange = ini_read_real("level","levelchange",false);
 			ini_close();
 			room_goto(global.currentroom);

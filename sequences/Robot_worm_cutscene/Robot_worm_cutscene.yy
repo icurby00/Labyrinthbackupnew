@@ -1,5 +1,5 @@
 {
-  "$GMSequence":"",
+  "$GMSequence":"v1",
   "%Name":"Robot_worm_cutscene",
   "autoRecord":true,
   "backdropHeight":1200,

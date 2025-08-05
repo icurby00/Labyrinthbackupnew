@@ -37,17 +37,20 @@ else
 	
 }
 //jump
-if global.can_doublejump and candoublejump and jumpup
+if global.can_doublejump and candoublejump and jumpup 
 	{
 		vsp = -6;
-		candoublejump = false;
+		candoublejump = false
+		
 	}
-	
-if jumpup and (grounded or wall_jump)
+canjump -= 1;
+if jumpup and (grounded or wall_jump) and canjump > 0
 {
 	grounded = false;
 	vsp = -6;
 	candoublejump = true;
+	canjump = 0;
+	
 	if wall_jump
 	{
 		effect_create_below(ef_smoke, x, y, 1, c_white);
@@ -76,6 +79,7 @@ if already_walljumping
 	x += wj_move;
 	already_walljumping = already_walljumping and ((facing_dir > 0 and wj_goal_x > x) or (facing_dir < 0 and wj_goal_x < x));
 }
+
 //dash
 if dashing and not (already_dashing or dash_recharging)
 {
@@ -133,6 +137,7 @@ if (place_meeting(x,y+vsp, [ground1, ground2, ground3, ground4, Ograss]))
 	}
 	vsp = 0;
 	grounded = true;
+	canjump = 10;
 	dash_recharging = false;
 	candoublejump = false;
 }
@@ -141,8 +146,22 @@ else
 	grounded = false;
 }
 y = y + vsp;
-
-
+ 
+if keyboard_check_pressed(vk_space) || keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord("W"))
+{
+	buffer_counter = buffer_max;
+}
+if buffer_counter > 0				 //if buffer greater than zero
+{
+	buffer_counter -= 1;			 //count the buffer down
+	if  canjump > 0
+	{
+		vsp = -6;					 //launch upwards at -5 vertical speed
+		buffer_counter = 0;	         //reset the buffer
+		canjump = 0;
+		candoublejump = true;
+	}
+}
 //animation
 if (!onground)
 {
@@ -172,6 +191,7 @@ if (!onground)
 }
 else
 {
+	canjump = 10;
 	image_speed = 1;
 	if (hsp == 0)
 	{
@@ -241,6 +261,24 @@ if (global.snorkel = true) && (global.ice_suit = true) && tilemap_get_at_pixel(t
 	
 }
 if (global.snorkel = false) && (global.ice_suit = false) && tilemap_get_at_pixel(tiles2,x,y) 
+{
+	ini_open("Labyrinth.ini");
+			x = ini_read_real("player", "x", x);
+			y = ini_read_real("player", "y", y);
+			global.hp = ini_read_real("player", "hp", 3);
+			global.player_has_gun = ini_read_real("player", "playergun", false);
+			global.can_wall_jump = ini_read_real("player", "playerwalljump", false);
+			global.can_dash = ini_read_real("player", "playerdash", false);
+			global.can_doublejump = ini_read_real("player", "playerdoublejump", false);
+			global.redbullets = ini_read_real("player", "playerredbullet", false);
+			global.bullettype = ini_read_real("weapon", "weaponbullettype", false);
+			global.snorkel = ini_read_real("player", "playerwater", false);
+			global.ice_suit = ini_read_real("player", "playersuit", false);
+			global.prosuit = ini_read_real("player", "playerprosuit", false);
+			global.state = ini_read_real("player", "playerstate", characterstate.normal);
+			ini_close();
+}
+if (global.snorkel = true) && (global.ice_suit = false) && tilemap_get_at_pixel(tiles2,x,y) 
 {
 	ini_open("Labyrinth.ini");
 			x = ini_read_real("player", "x", x);

@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":43.636375,
+  "duration":43.636395,
   "name":"ice_level",
   "parent":{
     "name":"Sounds",

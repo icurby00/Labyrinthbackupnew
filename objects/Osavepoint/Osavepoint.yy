@@ -1,9 +1,7 @@
 {
   "$GMObject":"",
   "%Name":"Osavepoint",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"Oplayer","path":"objects/Oplayer/Oplayer.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "eventList":[],
   "managed":true,
   "name":"Osavepoint",
   "overriddenProperties":[],
@@ -11,7 +9,10 @@
     "name":"Objects",
     "path":"folders/Objects.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"Pcheckpoint",
+    "path":"objects/Pcheckpoint/Pcheckpoint.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

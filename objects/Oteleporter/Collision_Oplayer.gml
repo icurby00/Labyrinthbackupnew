@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-if (global.maxhp >= 4)
+if (global.maxhp >= 4) && global.Oboss_air = 0
 {
 	if room_exists(target_room)
 {

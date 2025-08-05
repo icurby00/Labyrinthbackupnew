@@ -91,7 +91,9 @@ enum BOSS_ROBOT_WORM_PHASE1
 	movement,
 	attack1,
 	attack2,
-	recovery
+	recovery,
+	movement2
+
 	
 }
 enum BOSS_ROBOT_WORM_PHASE2
@@ -101,6 +103,46 @@ enum BOSS_ROBOT_WORM_PHASE2
 	attack1,
 	attack2,
 	recovery
+}
+enum BOSS_ROBOT_WORM_PHASE3
+{
+	idle,
+	movement,
+	attack1,
+	attack2,
+	attack3,
+	recovery,
+	charge,
+	buff
+}
+enum HORROR_CREATURE_PHASE1
+{
+	idle,  // 0
+	movement,  //1
+	climb, //2
+	attack1, //3
+	attack2, //4
+	attack3, //5
+	ranged_attack, //6
+	recovery, //7
+	heal, //8 
+	jump //9
+}
+enum HORROR_CREATURE_PHASE2
+{
+	idle,
+	movement,
+	climb,
+	rush,
+	attack1,
+	attack2,
+	attack3,
+	attack4,
+	ranged_attack1,
+	ranged_attack2,
+	recovery,
+	heal,
+	jump
 }
 
 global.maxhp = 3;
@@ -114,6 +156,7 @@ global.can_doublejump = false;
 global.redbullets = false;
 global.greenbullets = false;
 global.icebullets = false;
+global.plasmabullets = false;
 global.currentroom = noone;
 global.snorkel = false;
 global.lavaproofsuit = false;
@@ -140,7 +183,7 @@ enum cutscene_boss
 	Playing_scene,
 	Finished
 }
-
+global.horror_collective = 3;
 // bosses defeated 
 global.Oboss_air = 1;
 global.Oboss_crusher = 1;
@@ -158,3 +201,8 @@ global.Oboss_horror_phase2 = 1;
 
 global.worm_boss_phase1 = 1;
 global.worm_boss_phase2 = 1;
+global.worm_boss_phase3 = 1;
+
+
+global.horror_creature_phase1 = 1;
+global.horror_creature_phase2 = 1;

@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
-hsp = 0;
+walkspd = 3;
+hsp = walkspd;
 vsp = 0;
 grv = 0;
 hp = 2;

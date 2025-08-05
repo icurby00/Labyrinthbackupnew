@@ -10,9 +10,9 @@ swimspd = 4;
 facing_dir = 1;
 direction = 0;
 grounded = false;
-
-
-
+canjump = 0;
+buffer_counter = 0; //initialise the buffer's counter
+buffer_max = 5;      //maximum frames allowed for buffer
 //wall jump/slide
 wall_jump = false;
 wall_slide_friction = 0.5;
