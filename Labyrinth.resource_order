@@ -242,6 +242,7 @@
     {"name":"rm_watersave","order":11,"path":"rooms/rm_watersave/rm_watersave.yy",},
     {"name":"Approach","order":1,"path":"scripts/Approach/Approach.yy",},
     {"name":"DrawSetText","order":2,"path":"scripts/DrawSetText/DrawSetText.yy",},
+    {"name":"move1","order":3,"path":"scripts/move1/move1.yy",},
     {"name":"Robot_worm_cutscene","order":1,"path":"sequences/Robot_worm_cutscene/Robot_worm_cutscene.yy",},
     {"name":"shBlack","order":2,"path":"shaders/shBlack/shBlack.yy",},
     {"name":"shGrey","order":1,"path":"shaders/shGrey/shGrey.yy",},

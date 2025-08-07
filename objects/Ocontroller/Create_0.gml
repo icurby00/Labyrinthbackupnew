@@ -126,7 +126,8 @@ enum HORROR_CREATURE_PHASE1
 	ranged_attack, //6
 	recovery, //7
 	heal, //8 
-	jump //9
+	jump, //9
+	dash //10
 }
 enum HORROR_CREATURE_PHASE2
 {

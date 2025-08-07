@@ -4,6 +4,8 @@ switch(state)
 {
 	case HORROR_CREATURE_PHASE1.idle:
 	{
+		move1()
+		if (hsp != 0 ) image_xscale = sign(hsp);
 		if (alarm[0] == -1)
 		{
 			alarm[0] = room_speed * 2;
@@ -13,60 +15,125 @@ switch(state)
 	
 	case HORROR_CREATURE_PHASE1.movement:
 	{
-		vsp = vsp + grv;
-	if (place_meeting(x+hsp,y, [ground1, ground2, ground3, ground4, Ograss]))
-		{
-		while (!place_meeting(x+sign(hsp),y, [ground1, ground2, ground3, ground4, Ograss]))
-		{
-			x = x + sign(hsp);
-		}
-		hsp = -hsp;
-	}
-		x = x + hsp;
+		 vsp += grv;
+        hsp = Approach(hsp, image_xscale * 4, 1);
 
-	if (place_meeting(x,y+vsp,[ground1, ground2, ground3, ground4, Ograss]))
-	{
-	while (!place_meeting(x,y+sign(vsp),[ground1, ground2, ground3, ground4, Ograss]))
-		{
-			y = y + sign(vsp);
-		}
-			vsp = 0;
-		}
-		y = y + vsp;
-		if (hsp != 0 ) image_xscale = sign(hsp);
-		
-		if place_meeting(x,y,Ojumpboss)
-		{
-			state = HORROR_CREATURE_PHASE1.jump;
-		}
-		
-		if place_meeting(x,y,Oteleport)
-		{
-			state = HORROR_CREATURE_PHASE1.climb;
-		}
-	if (alarm[1] == -1)
-		{
-			alarm[1] = room_speed * 2;
-		}
-	
+        // Better ground detection
+        var ahead_x = x + sign(hsp) * 16;
+        var ahead_y = y + 1;
+        var ground_ahead = place_meeting(ahead_x, ahead_y, [ground1, ground2, ground3, ground4, Ograss, Oenemyblock]);
+        var on_ground = place_meeting(x, y + 1, [ground1, ground2, ground3, ground4, Ograss, Oenemyblock]);
+
+        if (on_ground && !ground_ahead)
+        {
+            // Randomly jump or dash
+            if (irandom(1) == 0)
+                state = HORROR_CREATURE_PHASE1.jump;
+            else
+                state = HORROR_CREATURE_PHASE1.dash;
+        }
+
+        // Wall climb detection
+        if (place_meeting(x + image_xscale * 4, y, [ground1, ground2, ground3, ground4, Ograss, Oenemyblock]))
+        {
+            state = HORROR_CREATURE_PHASE1.climb;
+        }
+
+        // Horizontal collision
+        if (!place_meeting(x + hsp, y, [ground1, ground2, ground3, ground4, Ograss, Oenemyblock]))
+            x += hsp;
+
+        // Vertical collision
+        if (!place_meeting(x, y + vsp, [ground1, ground2, ground3, ground4, Ograss, Oenemyblock]))
+            y += vsp;
+        else
+        {
+            while (!place_meeting(x, y + sign(vsp), [ground1, ground2, ground3, ground4, Ograss, Oenemyblock]))
+                y += sign(vsp);
+            vsp = 0;
+        }
+
+        if (hsp != 0) image_xscale = sign(hsp);
+
+        // UNSTUCK TELEPORT CODE
+        var max_teleport_fall = 256;
+        var max_horizontal_scan = 128;
+        var stuck = !on_ground || place_meeting(x, y, [ground1, ground2, ground3, ground4, Ograss, Oenemyblock]);
+        if (stuck)
+            alarm[10] = (alarm[10] == -1) ? 0 : alarm[10] + 1;
+        else
+            alarm[10] = -1;
+
+        if (alarm[10] > 60)
+        {
+            var scan_step_h = 8;
+            var scan_step_v = 4;
+            var closest_dist = 1000000;
+            var candidate_x = x;
+            var candidate_y = y;
+            var found_ground = false;
+
+            for (var offset_x = -max_horizontal_scan; offset_x <= max_horizontal_scan; offset_x += scan_step_h)
+            {
+                for (var offset_y = 0; offset_y <= max_teleport_fall; offset_y += scan_step_v)
+                {
+                    var check_x = x + offset_x;
+                    var check_y = y + offset_y;
+
+                    if (place_meeting(check_x, check_y, [ground1, ground2, ground3, ground4, Ograss, Oenemyblock]))
+                    {
+                        if (!place_meeting(check_x, check_y - 32, [ground1, ground2, ground3, ground4, Ograss, Oenemyblock]))
+                        {
+                            var dist = abs(offset_x) + offset_y;
+                            if (dist < closest_dist)
+                            {
+                                closest_dist = dist;
+                                candidate_x = check_x;
+                                candidate_y = check_y - 1;
+                                found_ground = true;
+                            }
+                        }
+                        break;
+                    }
+                }
+            }
+
+            if (found_ground)
+            {
+                x = candidate_x;
+                y = candidate_y;
+                vsp = 0;
+                state = HORROR_CREATURE_PHASE1.movement;
+                alarm[10] = -1;
+            }
+        }
+		if (alarm[1] == -1) {
+		alarm[1] = room_speed * 2;
+	}
 	}break;
 	
 	case HORROR_CREATURE_PHASE1.attack1:
 	{
-		while (energy > 0)
-		{
-			walkspd++;
-			energy--;
-		}
-		if energy = 0
-		{
-			state = HORROR_CREATURE_PHASE1.recovery;
-		}
-		
+		move1()
+		if (hsp != 0 ) image_xscale = sign(hsp);
+		if (energy > 0) {
+
+            walkspd++;
+
+            energy--;
+
+        } else {
+
+            state = HORROR_CREATURE_PHASE1.recovery;
+
+        }
 	}break;
 	
 	case HORROR_CREATURE_PHASE1.attack2:
 	{
+		alarm[8] = -1;
+		move1()
+		if (hsp != 0 ) image_xscale = sign(hsp);
 		walkspd = 12;
 		if place_meeting(x,y,Oplayer)
 		{
@@ -81,6 +148,8 @@ switch(state)
 	
 	case HORROR_CREATURE_PHASE1.attack3:
 	{
+		move1()
+		if (hsp != 0 ) image_xscale = sign(hsp);
 		if (energy == 0) energy = 4;
 		if (alarm[4] == -1)
         {
@@ -97,6 +166,8 @@ switch(state)
 	
 	case HORROR_CREATURE_PHASE1.ranged_attack:
 	{
+		move1()
+		if (hsp != 0 ) image_xscale = sign(hsp);
 		if (energy == 0) energy = 3;
 		if (alarm[4] == -1)
         {
@@ -113,7 +184,9 @@ switch(state)
 	
 	case HORROR_CREATURE_PHASE1.heal:
 	{
-		hp = hp + 200;
+		move1()
+		if (hsp != 0 ) image_xscale = sign(hsp);
+		hp = hp + 10;
 		if (alarm[2] == -1)
 		{
 			alarm[2] = room_speed * 2;
@@ -123,40 +196,84 @@ switch(state)
 	
 	case HORROR_CREATURE_PHASE1.climb:
 	{
-		// Count how many teleport points exist
-		var num_points = instance_number(Oboss_warp9);
+		var climb_speed = 6;
 
-			// Make sure there's at least one
-			if (num_points > 0) {
-			    // Pick a random index
-			    var index = irandom(num_points - 1);
-    
-			    // Get that teleport point instance
-			    var teleport_target = instance_find(Oboss_warp9, index);
-    
-			    // Move boss to its position
-			    x = teleport_target.x;
-			    y = teleport_target.y;
-			}
-			if (alarm[5] == -1)
-			{
-			alarm[5] = room_speed;
-			}
-		
-		
-		
+    var wall_in_front = place_meeting(x + image_xscale * 16, y, [ground1, ground2, ground3, ground4, Ograss]);
+    var ceiling_above = place_meeting(x, y - 128, [ground1, ground2, ground3, ground4, Ograss]);
+    var forward_clear = !place_meeting(x + image_xscale * climb_speed, y, [ground1, ground2, ground3, ground4, Ograss, Oenemyblock]);
+    var ground_below = place_meeting(x, y + 1, [ground1, ground2, ground3, ground4, Ograss]);
+
+    // Check both sides for wall (bucket trap)
+    var wall_left = place_meeting(x - 16, y, [ground1, ground2, ground3, ground4, Ograss]);
+    var wall_right = place_meeting(x + 16, y, [ground1, ground2, ground3, ground4, Ograss]);
+
+    // Allow climbing up if there's a wall and space
+    if ((wall_in_front || wall_left || wall_right) && !ceiling_above) {
+        if (!place_meeting(x, y - climb_speed, [ground1, ground2, ground3, ground4, Ograss])) {
+            y -= climb_speed;
+        }
+    }
+    // Climb down if stuck (ceiling above and walls)
+    else if ((wall_in_front || wall_left || wall_right) && ceiling_above) {
+        if (!place_meeting(x, y + climb_speed, [ground1, ground2, ground3, ground4, Ograss])) {
+            y += climb_speed;
+        } else {
+            state = HORROR_CREATURE_PHASE1.movement;
+        }
+    }
+    // Move out if climbed up
+    else if (!wall_in_front && forward_clear) {
+        x += image_xscale * climb_speed;
+    }
+
+    // Ground exit
+    if (ground_below) {
+        state = HORROR_CREATURE_PHASE1.movement;
+    }
+
+    // Climb timeout
+    if (alarm[8] == -1) alarm[8] = room_speed * 2;
+    if (alarm[8] == 0) {
+        state = HORROR_CREATURE_PHASE1.movement;
+        alarm[8] = -1;
+    }
+
 	}break;
 	
 	case HORROR_CREATURE_PHASE1.jump:
 	{
-		vsp = -20;
-		
-		vsp = vsp + grv;
-		if (alarm[6] == -1)
-		{
-			alarm[6] = room_speed ;
-		}
-		
+		 if (alarm[11] == -1)
+        {
+            hsp = sign(hsp) * 16;
+            alarm[11] = room_speed / 2;
+        }
+
+        vsp += grv;
+
+        if (!place_meeting(x + hsp, y, [ground1, ground2, ground3, ground4, Ograss]))
+            x += hsp;
+        else
+            hsp = -hsp;
+
+        if (place_meeting(x, y + vsp, [ground1, ground2, ground3, ground4, Ograss]))
+        {
+            while (!place_meeting(x, y + sign(vsp), [ground1, ground2, ground3, ground4, Ograss]))
+                y += sign(vsp);
+            vsp = 0;
+        }
+        else
+        {
+            y += vsp;
+        }
+
+        if (alarm[11] == 0)
+        {
+            hsp = sign(hsp) * 4;
+            alarm[11] = -1;
+            state = HORROR_CREATURE_PHASE1.movement;
+        }
+
+        if (hsp != 0) image_xscale = sign(hsp);
 	}break;
 	
 	case HORROR_CREATURE_PHASE1.recovery:
@@ -168,32 +285,120 @@ switch(state)
 		}
 		
 	}break;
-	
+	case HORROR_CREATURE_PHASE1.dash:
+{
+    var dash_speed = 18;
+
+    // Apply horizontal movement only (no gravity, it’s a leap)
+    hsp = image_xscale * dash_speed;
+
+    // Move forward
+    if (!place_meeting(x + hsp, y, [ground1, ground2, ground3, ground4, Ograss])) {
+        x += hsp;
+    }
+
+    // Allow to fall with gravity
+    vsp += grv;
+    if (!place_meeting(x, y + vsp, [ground1, ground2, ground3, ground4, Ograss])) {
+        y += vsp;
+    } else {
+        // Landed
+        while (!place_meeting(x, y + sign(vsp), [ground1, ground2, ground3, ground4, Ograss])) {
+            y += sign(vsp);
+        }
+        vsp = 0;
+        state = HORROR_CREATURE_PHASE1.movement
+		jumping = false; // allow future jumps/dashes
+    }
+
+    // Optional safety: fallback if dash lasts too long
+    if (alarm[9] == -1) alarm[9] = room_speed * 3;
+    if (alarm[9] == 0) {
+        state = HORROR_CREATURE_PHASE1.movement;
+        alarm[9] = -1;
+    }
+}
+break;
 	
 	
 	
 	
 }
-vsp = vsp + grv;
-if (place_meeting(x+hsp,y, [ground1, ground2, ground3, ground4, Ograss]))
-		{
-		while (!place_meeting(x+sign(hsp),y, [ground1, ground2, ground3, ground4, Ograss]))
-		{
-			x = x + sign(hsp);
-		}
-		hsp = -hsp;
-	}
-		x = x + hsp;
+	// In movement state only:
+if (state == HORROR_CREATURE_PHASE1.movement || state == HORROR_CREATURE_PHASE1.jump)
+{
+    vsp += grv;
+    // Horizontal and vertical collision/movement here
+}
+// --- UNSTUCK TELEPORT CODE WITH HORIZONTAL SCAN ---
+var max_teleport_fall = 256;
+var max_horizontal_scan = 128;  // max horizontal distance to scan left and right
+var found_ground = false;
+var new_x = x;
+var new_y = y;
 
-	if (place_meeting(x,y+vsp,[ground1, ground2, ground3, ground4, Ograss]))
-	{
-	while (!place_meeting(x,y+sign(vsp),[ground1, ground2, ground3, ground4, Ograss]))
-		{
-			y = y + sign(vsp);
-		}
-			vsp = 0;
-		}
-		y = y + vsp;
-		if (hsp != 0 ) image_xscale = sign(hsp);
-	
+// Check if on ground
+var on_ground = place_meeting(x, y + 1, [ground1, ground2, ground3, ground4, Ograss]);
+
+// Check if stuck inside wall or not on ground
+var stuck_in_wall = place_meeting(x, y, [ground1, ground2, ground3, ground4, Ograss]);
+
+// Track stuck time if stuck or NOT on ground
+if (!on_ground || stuck_in_wall) {
+    alarm[10] = (alarm[10] == -1) ? 0 : alarm[10] + 1;
+} else {
+    alarm[10] = -1; // reset stuck timer
+}
+
+// If stuck longer than 60 steps (~1 sec)
+if (alarm[10] > 60)
+{
+    // Scan a grid around the boss horizontally and vertically for nearest ground spot
+    // We scan horizontally in steps of 8 pixels, vertically downwards in steps of 4 pixels
+    var scan_step_h = 8;
+    var scan_step_v = 4;
+    var closest_dist = 1000000; // large number
+    var candidate_x = x;
+    var candidate_y = y;
+
+    
+    for (var offset_x = -max_horizontal_scan; offset_x <= max_horizontal_scan; offset_x += scan_step_h)
+    {
+        for (var offset_y = 0; offset_y <= max_teleport_fall; offset_y += scan_step_v)
+        {
+            var check_x = x + offset_x;
+            var check_y = y + offset_y;
+
+            // Check if ground exists just below check_y
+            if (place_meeting(check_x, check_y, [ground1, ground2, ground3, ground4, Ograss]))
+            {
+                // Also check if position above ground is free for boss to stand
+                if (!place_meeting(check_x, check_y - 32, [ground1, ground2, ground3, ground4, Ograss]))
+                {
+                    // Calculate distance from current position to candidate
+                    var dist = abs(offset_x) + offset_y;
+                    if (dist < closest_dist)
+                    {
+                        closest_dist = dist;
+                        candidate_x = check_x;
+                        candidate_y = check_y - 1; // just above ground
+                        found_ground = true;
+                    }
+                }
+                break; // stop vertical scan at first ground found for this horizontal position
+            }
+        }
+    }
+
+    if (found_ground)
+    {
+        x = candidate_x;
+        y = candidate_y;
+        vsp = 0;
+        state = HORROR_CREATURE_PHASE1.movement; // reset to movement after teleport
+        alarm[10] = -1; // reset stuck timer
+    }
+}
+
+
 	show_debug_message(state);

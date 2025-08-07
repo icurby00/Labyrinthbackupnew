@@ -270,6 +270,7 @@
     {"id":{"name":"rm_watersave","path":"rooms/rm_watersave/rm_watersave.yy",},},
     {"id":{"name":"Approach","path":"scripts/Approach/Approach.yy",},},
     {"id":{"name":"DrawSetText","path":"scripts/DrawSetText/DrawSetText.yy",},},
+    {"id":{"name":"move1","path":"scripts/move1/move1.yy",},},
     {"id":{"name":"Gameover","path":"sequences/Gameover/Gameover.yy",},},
     {"id":{"name":"Robot_worm_cutscene","path":"sequences/Robot_worm_cutscene/Robot_worm_cutscene.yy",},},
     {"id":{"name":"shBlack","path":"shaders/shBlack/shBlack.yy",},},
