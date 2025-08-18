@@ -11,6 +11,7 @@ ini_write_real("player", "playerdoublejump", global.can_doublejump);
 ini_write_real("player", "playerredbullet", global.redbullets);
 ini_write_real("player", "playergreenbullet", global.greenbullets);
 ini_write_real("player", "playericebullet", global.icebullets);
+ini_write_real("player", "playerplasmabullet", global.plasmabullets);
 ini_write_real("player", "playerwater", global.snorkel);
 ini_write_real("player", "playersuit", global.ice_suit);
 ini_write_real("player", "playerprosuit", global.prosuit);
@@ -28,7 +29,10 @@ ini_write_real("boss", "horrorboss_phase2", global.Oboss_horror_phase2);
 ini_write_real("boss", "robot_worm_phase1", global.worm_boss_phase1);
 ini_write_real("boss", "robot_worm_phase2", global.worm_boss_phase2);
 ini_write_real("boss", "robot_worm_phase3", global.worm_boss_phase3);
+ini_write_real("boss", "horrorcreaturephase1", global.horror_creature_phase1);
+ini_write_real("boss", "horrorcreaturephase2", global.horror_creature_phase2);
 ini_write_real("level", "levelchange", global.levelchange);
+
 ini_close();
 
 

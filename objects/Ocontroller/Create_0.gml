@@ -123,7 +123,7 @@ enum HORROR_CREATURE_PHASE1
 	attack1, //3
 	attack2, //4
 	attack3, //5
-	ranged_attack, //6
+	ranged_attack1, //6
 	recovery, //7
 	heal, //8 
 	jump, //9
@@ -134,16 +134,14 @@ enum HORROR_CREATURE_PHASE2
 	idle,
 	movement,
 	climb,
-	rush,
 	attack1,
 	attack2,
 	attack3,
-	attack4,
 	ranged_attack1,
-	ranged_attack2,
 	recovery,
 	heal,
-	jump
+	jump,
+	dash
 }
 
 global.maxhp = 3;
@@ -158,6 +156,7 @@ global.redbullets = false;
 global.greenbullets = false;
 global.icebullets = false;
 global.plasmabullets = false;
+global.triple_shot = false;
 global.currentroom = noone;
 global.snorkel = false;
 global.lavaproofsuit = false;

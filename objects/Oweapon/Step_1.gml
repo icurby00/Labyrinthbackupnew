@@ -20,6 +20,23 @@ if (mouse_check_button_pressed(mb_left)) && (global.player_has_gun = true) && (f
 		image_angle = direction;
 	}
 	
+	if (global.triple_shot = true)
+	{
+		with (instance_create_layer(x-3,y+7.5,"Bullets",global.bullettype))
+	{
+		speed = 25;
+		direction = other.image_angle;
+		image_angle = direction;
+	}
+		with (instance_create_layer(x-3,y-7.5,"Bullets",global.bullettype))
+	{
+		speed = 25;
+		direction = other.image_angle;
+		image_angle = direction;
+	}
+	
+	}
+	
 }
 
 x = x - lengthdir_x(recoil, image_angle);

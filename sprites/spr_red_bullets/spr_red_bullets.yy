@@ -60,7 +60,7 @@
     },
     "name":"spr_red_bullets",
     "playback":1,
-    "playbackSpeed":30.0,
+    "playbackSpeed":60.0,
     "playbackSpeedType":0,
     "resourceType":"GMSequence",
     "resourceVersion":"2.0",

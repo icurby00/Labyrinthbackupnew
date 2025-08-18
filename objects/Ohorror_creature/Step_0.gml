@@ -1,5 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
+/// @description Insert description here
+// You can write your code in this editor
 switch(state)
 {
 	case HORROR_CREATURE_PHASE1.idle:
@@ -15,7 +17,12 @@ switch(state)
 	
 	case HORROR_CREATURE_PHASE1.movement:
 	{
-		 vsp += grv;
+		alarm[1] = -1
+		if (alarm[1] == -1)
+		{
+			alarm[1] = room_speed * 2;
+		}
+		vsp += grv;
         hsp = Approach(hsp, image_xscale * 4, 1);
 
         // Better ground detection
@@ -32,9 +39,15 @@ switch(state)
             else
                 state = HORROR_CREATURE_PHASE1.dash;
         }
+		if (alarm[1] == 0)
+		{
+		    alarm[1] = -1;
+		    state = HORROR_CREATURE_PHASE1.attack1;
+		    break; // exit movement state early
+		}
 
         // Wall climb detection
-        if (place_meeting(x + image_xscale * 4, y, [ground1, ground2, ground3, ground4, Ograss, Oenemyblock]))
+        if (place_meeting(x + image_xscale * 4, y, [ground1, ground2, ground3, ground4, Ograss]))
         {
             state = HORROR_CREATURE_PHASE1.climb;
         }
@@ -55,65 +68,11 @@ switch(state)
 
         if (hsp != 0) image_xscale = sign(hsp);
 
-        // UNSTUCK TELEPORT CODE
-        var max_teleport_fall = 256;
-        var max_horizontal_scan = 128;
-        var stuck = !on_ground || place_meeting(x, y, [ground1, ground2, ground3, ground4, Ograss, Oenemyblock]);
-        if (stuck)
-            alarm[10] = (alarm[10] == -1) ? 0 : alarm[10] + 1;
-        else
-            alarm[10] = -1;
-
-        if (alarm[10] > 60)
-        {
-            var scan_step_h = 8;
-            var scan_step_v = 4;
-            var closest_dist = 1000000;
-            var candidate_x = x;
-            var candidate_y = y;
-            var found_ground = false;
-
-            for (var offset_x = -max_horizontal_scan; offset_x <= max_horizontal_scan; offset_x += scan_step_h)
-            {
-                for (var offset_y = 0; offset_y <= max_teleport_fall; offset_y += scan_step_v)
-                {
-                    var check_x = x + offset_x;
-                    var check_y = y + offset_y;
-
-                    if (place_meeting(check_x, check_y, [ground1, ground2, ground3, ground4, Ograss, Oenemyblock]))
-                    {
-                        if (!place_meeting(check_x, check_y - 32, [ground1, ground2, ground3, ground4, Ograss, Oenemyblock]))
-                        {
-                            var dist = abs(offset_x) + offset_y;
-                            if (dist < closest_dist)
-                            {
-                                closest_dist = dist;
-                                candidate_x = check_x;
-                                candidate_y = check_y - 1;
-                                found_ground = true;
-                            }
-                        }
-                        break;
-                    }
-                }
-            }
-
-            if (found_ground)
-            {
-                x = candidate_x;
-                y = candidate_y;
-                vsp = 0;
-                state = HORROR_CREATURE_PHASE1.movement;
-                alarm[10] = -1;
-            }
-        }
-		if (alarm[1] == -1) {
-		alarm[1] = room_speed * 2;
-	}
 	}break;
 	
 	case HORROR_CREATURE_PHASE1.attack1:
 	{
+		alarm[1] = -1
 		move1()
 		if (hsp != 0 ) image_xscale = sign(hsp);
 		if (energy > 0) {
@@ -131,6 +90,7 @@ switch(state)
 	
 	case HORROR_CREATURE_PHASE1.attack2:
 	{
+		alarm[1] = -1
 		alarm[8] = -1;
 		move1()
 		if (hsp != 0 ) image_xscale = sign(hsp);
@@ -148,6 +108,7 @@ switch(state)
 	
 	case HORROR_CREATURE_PHASE1.attack3:
 	{
+		alarm[1] = -1
 		move1()
 		if (hsp != 0 ) image_xscale = sign(hsp);
 		if (energy == 0) energy = 4;
@@ -164,8 +125,9 @@ switch(state)
 		
 	}break;
 	
-	case HORROR_CREATURE_PHASE1.ranged_attack:
+	case HORROR_CREATURE_PHASE1.ranged_attack1:
 	{
+		alarm[1] = -1
 		move1()
 		if (hsp != 0 ) image_xscale = sign(hsp);
 		if (energy == 0) energy = 3;
@@ -184,6 +146,7 @@ switch(state)
 	
 	case HORROR_CREATURE_PHASE1.heal:
 	{
+		alarm[1] = -1
 		move1()
 		if (hsp != 0 ) image_xscale = sign(hsp);
 		hp = hp + 10;
@@ -196,52 +159,38 @@ switch(state)
 	
 	case HORROR_CREATURE_PHASE1.climb:
 	{
-		var climb_speed = 6;
+		alarm[1] = -1
+		// Climb up if wall ahead
+        if (place_meeting(x + image_xscale * 4, y, [ground1, ground2, ground3, ground4, Ograss]))
+        {
+            y -= 4;
 
-    var wall_in_front = place_meeting(x + image_xscale * 16, y, [ground1, ground2, ground3, ground4, Ograss]);
-    var ceiling_above = place_meeting(x, y - 128, [ground1, ground2, ground3, ground4, Ograss]);
-    var forward_clear = !place_meeting(x + image_xscale * climb_speed, y, [ground1, ground2, ground3, ground4, Ograss, Oenemyblock]);
-    var ground_below = place_meeting(x, y + 1, [ground1, ground2, ground3, ground4, Ograss]);
-
-    // Check both sides for wall (bucket trap)
-    var wall_left = place_meeting(x - 16, y, [ground1, ground2, ground3, ground4, Ograss]);
-    var wall_right = place_meeting(x + 16, y, [ground1, ground2, ground3, ground4, Ograss]);
-
-    // Allow climbing up if there's a wall and space
-    if ((wall_in_front || wall_left || wall_right) && !ceiling_above) {
-        if (!place_meeting(x, y - climb_speed, [ground1, ground2, ground3, ground4, Ograss])) {
-            y -= climb_speed;
+            // Stop climbing if not touching wall or reached ceiling
+            if (!place_meeting(x + image_xscale * 4, y, [ground1, ground2, ground3, ground4, Ograss])
+             || place_meeting(x, y - 30, [ground1, ground2, ground3, ground4, Ograss]))
+            {
+                state = HORROR_CREATURE_PHASE1.movement;
+            }
         }
-    }
-    // Climb down if stuck (ceiling above and walls)
-    else if ((wall_in_front || wall_left || wall_right) && ceiling_above) {
-        if (!place_meeting(x, y + climb_speed, [ground1, ground2, ground3, ground4, Ograss])) {
-            y += climb_speed;
-        } else {
-            state = HORROR_CREATURE_PHASE1.movement;
+        else
+        {
+            // Climb down if touching ceiling or stuck
+            if (place_meeting(x, y - 30, [ground1, ground2, ground3, ground4, Ograss]))
+            {
+                y += 16;
+                if (!place_meeting(x + image_xscale * 16, y, [ground1, ground2, ground3, ground4, Ograss]))
+                {
+                    state = HORROR_CREATURE_PHASE1.movement;
+                }
+            }
         }
-    }
-    // Move out if climbed up
-    else if (!wall_in_front && forward_clear) {
-        x += image_xscale * climb_speed;
-    }
 
-    // Ground exit
-    if (ground_below) {
-        state = HORROR_CREATURE_PHASE1.movement;
-    }
-
-    // Climb timeout
-    if (alarm[8] == -1) alarm[8] = room_speed * 2;
-    if (alarm[8] == 0) {
-        state = HORROR_CREATURE_PHASE1.movement;
-        alarm[8] = -1;
-    }
 
 	}break;
 	
 	case HORROR_CREATURE_PHASE1.jump:
 	{
+		alarm[1] = -1
 		 if (alarm[11] == -1)
         {
             hsp = sign(hsp) * 16;
@@ -278,6 +227,7 @@ switch(state)
 	
 	case HORROR_CREATURE_PHASE1.recovery:
 	{
+		alarm[1] = -1
 		energy = 3;
 		if energy = 3
 		{
@@ -287,6 +237,7 @@ switch(state)
 	}break;
 	case HORROR_CREATURE_PHASE1.dash:
 {
+	alarm[1] = -1
     var dash_speed = 18;
 
     // Apply horizontal movement only (no gravity, it’s a leap)
@@ -400,5 +351,5 @@ if (alarm[10] > 60)
     }
 }
 
-
-	show_debug_message(state);
+show_debug_message("Boss State: " + string(state));
+	

@@ -49,6 +49,7 @@ if (menu_x > gui_width+150) && (menu_committed != -1)
 			global.redbullets = ini_read_real("player", "playerredbullet", false);
 			global.greenbullets = ini_read_real("player", "playergreenbullet",false);
 			global.icebullets = ini_read_real("player", "playericebullet",false);
+			global.plasmabullets = ini_read_real("player", "playerplasmabullet",false);
 			global.snorkel = ini_read_real("player", "playerwater", false);
 			global.ice_suit = ini_read_real("player", "playersuit", false);
 			global.prosuit = ini_read_real("player", "playerprosuit", false);
@@ -66,7 +67,10 @@ if (menu_x > gui_width+150) && (menu_committed != -1)
 			global.worm_boss_phase1 = ini_read_real("boss", "robot_worm_phase1", 1);
 			global.worm_boss_phase2 = ini_read_real("boss", "robot_worm_phase2",1);
 			global.worm_boss_phase3 = ini_read_real("boss", "robot_worm_phase3", 1);
+			global.horror_creature_phase1 = ini_read_real("boss","horrorcreaturephase1",1);
+			global.horror_creature_phase2 = ini_read_real("boss","horrorcreaturephase2",1);
 			global.levelchange = ini_read_real("level","levelchange",false);
+			
 			ini_close();
 			room_goto(global.currentroom);
 			instance_create_layer(x,y,"Player",Oplayer);

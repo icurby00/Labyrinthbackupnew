@@ -29,6 +29,7 @@ if not grounded and global.can_wall_jump and place_meeting(x + facing_dir, y, [g
 	if vsp > 0
 	{
 		vsp = wall_slide_friction;
+		
 	}
 }
 else
@@ -44,7 +45,7 @@ if global.can_doublejump and candoublejump and jumpup
 		
 	}
 canjump -= 1;
-if jumpup and (grounded or wall_jump) and canjump > 0
+if jumpup and ((grounded and canjump > 0) or wall_jump)
 {
 	grounded = false;
 	vsp = -6;
