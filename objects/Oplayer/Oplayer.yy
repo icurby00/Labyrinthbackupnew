@@ -21,6 +21,8 @@
     {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"Oboss_flame","path":"objects/Oboss_flame/Oboss_flame.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"Otriple_shot","path":"objects/Otriple_shot/Otriple_shot.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"Oplasma_bullet_pickup","path":"objects/Oplasma_bullet_pickup/Oplasma_bullet_pickup.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"Penemy_bullets","path":"objects/Penemy_bullets/Penemy_bullets.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"Orobot_death","path":"objects/Orobot_death/Orobot_death.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"Oplayer",

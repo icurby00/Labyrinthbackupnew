@@ -261,6 +261,7 @@
     {"name":"inst_1027E1D4","path":"rooms/rm_stoneice/rm_stoneice.yy",},
     {"name":"inst_46561CF8","path":"rooms/rm_stoneice/rm_stoneice.yy",},
     {"name":"inst_4CB16FE","path":"rooms/rm_stoneice/rm_stoneice.yy",},
+    {"name":"inst_9E98BC7","path":"rooms/rm_stoneice/rm_stoneice.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -283,6 +284,9 @@
         {"$GMRInstance":"v2","%Name":"inst_4CB16FE","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_4CB16FE","objectId":{"name":"Ostonesign","path":"objects/Ostonesign/Ostonesign.yy",},"properties":[
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"Ostonesign","path":"objects/Ostonesign/Ostonesign.yy",},"propertyId":{"name":"text","path":"objects/Ostonesign/Ostonesign.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"\"Seems that this area\\n is below an artic area\"",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":2320.0,"y":6656.0,},
+        {"$GMRInstance":"v2","%Name":"inst_9E98BC7","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_9E98BC7","objectId":{"name":"Ostonesign","path":"objects/Ostonesign/Ostonesign.yy",},"properties":[
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"Ostonesign","path":"objects/Ostonesign/Ostonesign.yy",},"propertyId":{"name":"text","path":"objects/Ostonesign/Ostonesign.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"\"Don't climb the wall to the top \\n without a way to breathe underwater\"",},
+          ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":2000.0,"y":6640.0,},
       ],"layers":[],"name":"Signs","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Instances","depth":600,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v2","%Name":"inst_7B6295F9","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_7B6295F9","objectId":{"name":"Ograss","path":"objects/Ograss/Ograss.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":20.0,"scaleY":1.0,"x":3008.0,"y":6880.0,},
