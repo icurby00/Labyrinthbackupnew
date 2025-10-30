@@ -1,6 +1,7 @@
 /// @description control menu
 // You can write your code in this editor
 //item ease in
+/**
 menu_x += (menu_x_target - menu_x) / menu_speed;
 
 
@@ -70,6 +71,7 @@ if (menu_x > gui_width+150) && (menu_committed != -1)
 			global.horror_creature_phase1 = ini_read_real("boss","horrorcreaturephase1",1);
 			global.horror_creature_phase2 = ini_read_real("boss","horrorcreaturephase2",1);
 			global.levelchange = ini_read_real("level","levelchange",false);
+			global.currentroom = ini_read_real("room", "room", rm_grassland);
 			
 			ini_close();
 			room_goto(global.currentroom);

@@ -1,15 +1,17 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v2",
   "%Name":"Early_game",
   "audioGroupId":{
     "name":"audiolevel",
     "path":"audiogroups/audiolevel",
   },
   "bitDepth":1,
-  "bitRate":128,
+  "channelFormat":1,
   "compression":0,
+  "compressionQuality":4,
   "conversionMode":0,
   "duration":16.0,
+  "exportDir":"",
   "name":"Early_game",
   "parent":{
     "name":"Sounds",
@@ -20,6 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"Early_game.wav",
-  "type":1,
   "volume":1.0,
 }

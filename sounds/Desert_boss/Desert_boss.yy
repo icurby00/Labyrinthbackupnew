@@ -1,15 +1,17 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v2",
   "%Name":"Desert_boss",
   "audioGroupId":{
     "name":"audiolevel",
     "path":"audiogroups/audiolevel",
   },
   "bitDepth":1,
-  "bitRate":512,
+  "channelFormat":1,
   "compression":1,
+  "compressionQuality":10,
   "conversionMode":0,
   "duration":30.0,
+  "exportDir":"",
   "name":"Desert_boss",
   "parent":{
     "name":"Sounds",
@@ -20,6 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":48000,
   "soundFile":"Desert_boss.wav",
-  "type":1,
   "volume":1.0,
 }

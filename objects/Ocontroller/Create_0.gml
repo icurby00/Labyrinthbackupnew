@@ -1,5 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
+
+randomise();
+
 //character states
 enum characterstate
 {
@@ -143,7 +146,19 @@ enum HORROR_CREATURE_PHASE2
 	jump,
 	dash
 }
-
+enum ROBOT_RANGED
+{
+	idle,
+	movement,
+	firing
+}
+enum ROBOT_FLAME
+{
+	idle,
+	movement,
+	firing
+}
+global.textspeed = 1;
 global.maxhp = 3;
 global.x = x;
 global.y = y;

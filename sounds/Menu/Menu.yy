@@ -1,15 +1,17 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v2",
   "%Name":"Menu",
   "audioGroupId":{
     "name":"audiomenu",
     "path":"audiogroups/audiomenu",
   },
   "bitDepth":1,
-  "bitRate":128,
+  "channelFormat":1,
   "compression":1,
+  "compressionQuality":4,
   "conversionMode":0,
   "duration":21.818209,
+  "exportDir":"",
   "name":"Menu",
   "parent":{
     "name":"Sounds",
@@ -20,6 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"Menu.wav",
-  "type":1,
   "volume":1.0,
 }
