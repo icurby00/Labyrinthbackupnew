@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"Industrial",
+  "audioGroupId":{
+    "name":"audiolevel",
+    "path":"audiogroups/audiolevel",
+  },
+  "bitDepth":0,
+  "channelFormat":1,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":52.401646,
+  "exportDir":"",
+  "name":"Industrial",
+  "parent":{
+    "name":"Sounds",
+    "path":"folders/Sounds.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":48000,
+  "soundFile":"Industrial.mp3",
+  "volume":1.0,
+}

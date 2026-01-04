@@ -31,6 +31,7 @@ ini_write_real("boss", "robot_worm_phase2", global.worm_boss_phase2);
 ini_write_real("boss", "robot_worm_phase3", global.worm_boss_phase3);
 ini_write_real("boss", "horrorcreaturephase1", global.horror_creature_phase1);
 ini_write_real("boss", "horrorcreaturephase2", global.horror_creature_phase2);
+ini_write_real("boss", "turretboss", global.turret_boss);
 ini_write_real("level", "levelchange", global.levelchange);
 
 ini_close();

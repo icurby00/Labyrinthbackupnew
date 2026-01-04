@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"Escape",
+  "audioGroupId":{
+    "name":"audiolevel",
+    "path":"audiogroups/audiolevel",
+  },
+  "bitDepth":1,
+  "channelFormat":1,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":16.039185,
+  "exportDir":"",
+  "name":"Escape",
+  "parent":{
+    "name":"Sounds",
+    "path":"folders/Sounds.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"Escape.mp3",
+  "volume":1.0,
+}

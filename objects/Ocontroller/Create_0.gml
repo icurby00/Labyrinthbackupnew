@@ -1,5 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
+
+randomise();
+
 //character states
 enum characterstate
 {
@@ -143,7 +146,27 @@ enum HORROR_CREATURE_PHASE2
 	jump,
 	dash
 }
-
+enum ROBOT_RANGED
+{
+	idle,
+	movement,
+	firing
+}
+enum ROBOT_FLAME
+{
+	idle,
+	movement,
+	firing
+}
+enum TURRET_BOSS
+{
+	recovery,
+	firing,
+	attack,
+	beam
+	
+}
+global.textspeed = 1;
 global.maxhp = 3;
 global.x = x;
 global.y = y;
@@ -183,6 +206,7 @@ enum cutscene_boss
 	Playing_scene,
 	Finished
 }
+global.triple_shot_done = 0;
 global.horror_collective = 3;
 // bosses defeated 
 global.Oboss_air = 1;
@@ -206,3 +230,5 @@ global.worm_boss_phase3 = 1;
 
 global.horror_creature_phase1 = 1;
 global.horror_creature_phase2 = 1;
+
+global.turret_boss = 1;

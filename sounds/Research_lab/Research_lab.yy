@@ -1,0 +1,31 @@
+{
+  "$GMSound":"v2",
+  "%Name":"Research_lab",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":1,
+  "compression":0,
+  "compressionQuality":4,
+  "ConfigValues":{
+    "Window":{
+      "audioGroupId":"{ \"name\":\"audiolevel\", \"path\":\"audiogroups/audiolevel\" }",
+    },
+  },
+  "conversionMode":0,
+  "duration":43.636395,
+  "exportDir":"",
+  "name":"Research_lab",
+  "parent":{
+    "name":"Sounds",
+    "path":"folders/Sounds.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"Research_lab.wav",
+  "volume":1.0,
+}

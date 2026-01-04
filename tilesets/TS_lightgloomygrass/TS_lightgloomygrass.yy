@@ -26,7 +26,7 @@
     "name":"tileset_lightgloomygrass",
     "path":"sprites/tileset_lightgloomygrass/tileset_lightgloomygrass.yy",
   },
-  "spriteNoExport":true,
+  "spriteNoExport":false,
   "textureGroupId":{
     "name":"Default",
     "path":"texturegroups/Default",

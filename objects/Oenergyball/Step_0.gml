@@ -12,16 +12,6 @@ if (limit_speed)
 }
 var near =  instance_nearest(x,y,Oplayer);
 move_towards_point(near.x,near.y,1);
-	// collide
-if (place_meeting(x+hsp,y,[ground1, ground2, ground3, ground4, Ograss]))
-{
-	while (!place_meeting(x+sign(hsp),y,[ground1, ground2, ground3, ground4, Ograss]))
-	{
-		x = x + sign(hsp);
-	}
-	hsp = -hsp;
-}
-x = x + hsp;
 
 // collide
 if (place_meeting(x+hsp,y,[ground1, ground2, ground3, ground4, Ograss]))

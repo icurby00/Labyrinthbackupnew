@@ -1,23 +1,57 @@
-/// @description GUI menu setup
-// You can write your code in this editor
+#macro MAIN 0
+#macro SETTINGS 1
+#macro TOTAL 2
+
+global.dsm_settings = ds_map_create();
+#macro set global.dsm_settings
 
 
-gui_width = display_get_gui_width();
-gui_height = display_get_gui_height();
-gui_margin = 32;
+ds_map_add(set, "sound", [5, [0, 10]]);
+ds_map_add(set, "music", [5, [0, 10]]);
+ds_map_add(set, "text_speed", [1, ["Slow", "Normal", "Fast"]]);
 
-menu_x = gui_width + 200;
-menu_y = gui_height - gui_margin;
-menu_x_target = gui_width - gui_margin;
-menu_speed = 25; //lower is faster
-menu_font = fMenu;
-menu_itemheight = font_get_size(menu_font);
-menu_committed = -1;
-menu_control = true;
+// Main Menu
+menu[MAIN][0] = "New Game";
+menu[MAIN][1] = "Continue";
+menu[MAIN][2] = "Options";
+menu[MAIN][3] = "Quit";
 
-menu[2] = "New Game";
-menu[1] = "Continue";
-menu[0] = "Quit";
+// Options Menu
+menu[SETTINGS][0] = ["< Sound FX> " , "sound"];
+menu[SETTINGS][1] = ["< Music >  " , "music"];
+menu[SETTINGS][2] = ["< Text Speed >" , "text_speed"];
+menu[SETTINGS][3] = "Back";
 
-menu_items = array_length(menu);
-menu_cursor = 2;
+
+index = 0;
+sub_menu = 0;
+
+menu_x_pos = room_width * .5;
+menu_y_pos = room_height * .4;
+click_area_width = 40;
+
+
+function button(_y, _wl, _wr, _h) constructor {
+	y = _y;
+	wl = _wl;
+	wr = _wr;
+	h = _h;
+}
+
+
+var _h = 40;
+
+
+for (var a = 0; a < TOTAL; ++a) {
+	for (var b = 0; b < array_length(menu[a]); ++b) {
+	   button_arr[a][b] = new button(0, room_width/2, room_width/2, _h);
+	}
+    
+}
+
+
+
+
+
+
+

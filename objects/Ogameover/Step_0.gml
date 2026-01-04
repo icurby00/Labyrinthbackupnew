@@ -104,6 +104,8 @@ if (global.lose = true && sequenceState = seqstate.Notplaying)
 	instance_deactivate_object(Oplayer);
 	instance_deactivate_object(Oweapon);
 	instance_deactivate_object(pSigns);
+	instance_deactivate_object(Oenergyball);
+	instance_deactivate_object(Penemy_bullets);
 
 	if (alarm[0] == -1) {
 			alarm[0] = room_speed;
