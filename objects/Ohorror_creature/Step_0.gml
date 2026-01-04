@@ -351,5 +351,5 @@ if (alarm[10] > 60)
     }
 }
 
-show_debug_message("Boss State: " + string(state));
+
 	

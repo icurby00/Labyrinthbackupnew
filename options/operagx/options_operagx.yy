@@ -1,5 +1,5 @@
 {
-  "$GMOperaGXOptions":"",
+  "$GMOperaGXOptions":"v1",
   "%Name":"operagx",
   "ConfigValues":{
     "Window":{
@@ -29,6 +29,7 @@
   "option_operagx_team_id":"5b90ff5b-779d-400a-8d74-77825204f559",
   "option_operagx_team_name":"Curbette studio",
   "option_operagx_texture_page":"2048x2048",
+  "option_operagx_transparent_background":false,
   "option_operagx_version":"1.0.0.0",
   "resourceType":"GMOperaGXOptions",
   "resourceVersion":"2.0",

@@ -1,15 +1,22 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v2",
   "%Name":"snd_lava_area_2",
   "audioGroupId":{
-    "name":"audiogroup_default",
-    "path":"audiogroups/audiogroup_default",
+    "name":"audiolevel",
+    "path":"audiogroups/audiolevel",
   },
   "bitDepth":1,
-  "bitRate":128,
+  "channelFormat":1,
   "compression":0,
+  "compressionQuality":4,
+  "ConfigValues":{
+    "Window":{
+      "audioGroupId":"{ \"name\":\"audiolevel\", \"path\":\"audiogroups/audiolevel\" }",
+    },
+  },
   "conversionMode":0,
   "duration":63.608162,
+  "exportDir":"",
   "name":"snd_lava_area_2",
   "parent":{
     "name":"Sounds",
@@ -20,6 +27,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"snd_lava_area_2.mp3",
-  "type":1,
   "volume":1.0,
 }

@@ -9,7 +9,7 @@ image_angle = point_direction(x,y,mouse_x, mouse_y);
 }
 firing_delay =- 1;
 recoil = max(0,recoil - 1);
-if (mouse_check_button_pressed(mb_left)) && (global.player_has_gun = true) && (firing_delay < 0)
+if (mouse_check_button_pressed(mb_left)) && (global.player_has_gun == true) && (firing_delay < 0)
 {
 	recoil = 4;
 	firing_delay = 5;
@@ -25,13 +25,13 @@ if (mouse_check_button_pressed(mb_left)) && (global.player_has_gun = true) && (f
 		with (instance_create_layer(x-3,y+7.5,"Bullets",global.bullettype))
 	{
 		speed = 25;
-		direction = other.image_angle;
+		direction = other.image_angle - 5;
 		image_angle = direction;
 	}
 		with (instance_create_layer(x-3,y-7.5,"Bullets",global.bullettype))
 	{
 		speed = 25;
-		direction = other.image_angle;
+		direction = other.image_angle + 5;
 		image_angle = direction;
 	}
 	

@@ -1,15 +1,17 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v2",
   "%Name":"Horror_attic",
   "audioGroupId":{
     "name":"audiolevel",
     "path":"audiogroups/audiolevel",
   },
   "bitDepth":1,
-  "bitRate":128,
+  "channelFormat":1,
   "compression":1,
+  "compressionQuality":4,
   "conversionMode":0,
   "duration":43.636395,
+  "exportDir":"",
   "name":"Horror_attic",
   "parent":{
     "name":"Sounds",
@@ -20,6 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"Horror_attic.wav",
-  "type":1,
   "volume":1.0,
 }

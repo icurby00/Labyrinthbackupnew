@@ -1,15 +1,17 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v2",
   "%Name":"DesertMiniboss",
   "audioGroupId":{
     "name":"audiolevel",
     "path":"audiogroups/audiolevel",
   },
   "bitDepth":1,
-  "bitRate":128,
+  "channelFormat":1,
   "compression":1,
+  "compressionQuality":4,
   "conversionMode":0,
   "duration":24.0,
+  "exportDir":"",
   "name":"DesertMiniboss",
   "parent":{
     "name":"Sounds",
@@ -20,6 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"DesertMiniboss.wav",
-  "type":1,
   "volume":1.0,
 }

@@ -6,7 +6,7 @@ grv = 1;
 hp = 10;
 flash = 0;
 energy = 3;
-
+walkspd = 0;
 state = horrorturret.idle;
 GroundId1 = layer_get_id("Tiles_1")
 ground1  = layer_tilemap_get_id(GroundId1);

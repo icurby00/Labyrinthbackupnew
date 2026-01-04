@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"tileset_lightgloomygrass",
   "bboxMode":0,
   "bbox_bottom":191,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"16ccd508-96f2-4e49-9873-b0662b641fd6","name":"16ccd508-96f2-4e49-9873-b0662b641fd6","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"16ccd508-96f2-4e49-9873-b0662b641fd6","name":"16ccd508-96f2-4e49-9873-b0662b641fd6","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":32,
   "gridY":32,
