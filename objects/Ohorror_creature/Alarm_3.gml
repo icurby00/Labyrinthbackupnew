@@ -1,3 +1,3 @@
 /// @description Insert description here
 // You can write your code in this editor
-state = HORROR_CREATURE_PHASE1.attack3;
+state = HORROR_CREATURE_PHASE2.attack3;

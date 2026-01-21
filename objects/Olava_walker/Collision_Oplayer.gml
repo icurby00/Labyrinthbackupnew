@@ -1,3 +1,3 @@
 /// @description Insert description here
 // You can write your code in this editor
-global.lava_walker = 1;
+global.lava_walker1 = 1;

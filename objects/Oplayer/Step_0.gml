@@ -1,15 +1,30 @@
 /// @description Insert description here
 // You can write your code in this editor
-if global.state = characterstate.normal
+if global.state == characterstate.normal
 {
+solid_list = [ground1, ground2, ground3, ground4, Ograss];
+if global.lavaproofsuit == true
+{
+	array_push(solid_list, ground5);
+	
+}
+else if global.lavaproofsuit == false && place_meeting(x,y,ground5)
+{
+	ini_open("Labyrinth.ini");
+	x = ini_read_real("player", "x", 0);
+	y = ini_read_real("player", "y", 0);
+	checkpoint_load();
+	ini_close();
 
+	
+}
 //move code
 mv_left = keyboard_check(vk_left) || keyboard_check(ord("A"));
 mv_right = keyboard_check(vk_right) || keyboard_check(ord("D"));
 jumpup = keyboard_check_pressed(vk_space) || keyboard_check_pressed(ord("W")) || keyboard_check_pressed(vk_up);
 dashing = global.can_dash and (keyboard_check_pressed(ord("X")));
-onground = place_meeting(x,y+1, [ground1, ground2, ground3, ground4, Ograss]);
-onwall = place_meeting(x+1,y, [ground1, ground2, ground3, ground4, Ograss]) - place_meeting(x-1,y, [ground1, ground2, ground3, ground4, Ograss]);
+onground = place_meeting(x,y+1, solid_list);
+onwall = place_meeting(x+1,y, solid_list) - place_meeting(x-1,y, solid_list);
 var move = mv_right - mv_left;
 hsp = move * walkspd;
 vsp = vsp + grv;
@@ -22,7 +37,7 @@ if move != 0
 }
 //wall jump
 
-if not grounded and global.can_wall_jump and place_meeting(x + facing_dir, y, [ground1, ground2, ground3, ground4, Ograss])
+if not grounded and global.can_wall_jump and place_meeting(x + facing_dir, y, solid_list)
 {
 	sprite_index = spr_player_wall_slide;
 	wall_jump = true;
@@ -54,7 +69,7 @@ if jumpup and ((grounded and canjump > 0) or wall_jump)
 	
 	if wall_jump
 	{
-		effect_create_below(ef_smoke, x, y, 1, c_white);
+		effect_create_layer("Player",ef_smoke, x, y, 1, c_white);
 		facing_dir *= -1;
 		image_xscale = facing_dir;
 		direction = point_direction(x,y, x + facing_dir, y);
@@ -68,9 +83,9 @@ if jumpup and ((grounded and canjump > 0) or wall_jump)
 if already_walljumping
 {
 	wj_move = walkspd * facing_dir;
-	if (place_meeting(x + wj_move, y, [ground1, ground2, ground3, ground4, Ograss]))
+	if (place_meeting(x + wj_move, y, solid_list))
 	{
-		while (!place_meeting(x + sign(wj_move), y, [ground1, ground2, ground3, ground4, Ograss]))
+		while (!place_meeting(x + sign(wj_move), y, solid_list))
 		{
 			x += sign(wj_move);
 		}
@@ -87,7 +102,7 @@ if dashing and not (already_dashing or dash_recharging)
 	dash_goal = x + dash_power * facing_dir;
 	already_dashing = true;
 	
-	effect_create_below(ef_spark, x, y, 1, c_white);
+	effect_create_layer("Player",ef_spark, x, y, 1, c_white);
 	sprite_index = spr_player_dash;
 	
 }
@@ -98,9 +113,9 @@ if already_dashing and not dash_recharging
 	grv = 0;
 	
 	dash_move = dash_speed * facing_dir;
-	if ( place_meeting ( x+dash_move, y, [ground1, ground2, ground3, ground4, Ograss] ) )
+	if ( place_meeting ( x+dash_move, y, solid_list ) )
 	{
-		while ( not place_meeting ( x+sign(dash_move), y, [ground1, ground2, ground3, ground4, Ograss] ) )
+		while ( not place_meeting ( x+sign(dash_move), y, solid_list ) )
 		{
 			x += sign(dash_move);
 		}
@@ -118,9 +133,9 @@ if already_dashing and not dash_recharging
 	}
 }
 	// collide
-if (place_meeting(x+hsp,y, [ground1, ground2, ground3, ground4, Ograss]))
+if (place_meeting(x+hsp,y, solid_list))
 {
-	while (!place_meeting(x+sign(hsp),y, [ground1, ground2, ground3, ground4, Ograss]))
+	while (!place_meeting(x+sign(hsp),y, solid_list))
 	{
 		x = x + sign(hsp);
 	}
@@ -130,9 +145,9 @@ x = x + hsp;
 
 
 //Vertical Collison
-if (place_meeting(x,y+vsp, [ground1, ground2, ground3, ground4, Ograss]))
+if (place_meeting(x,y+vsp, solid_list))
 {
-	while (!place_meeting(x,y+sign(vsp), [ground1, ground2, ground3, ground4, Ograss]))
+	while (!place_meeting(x,y+sign(vsp), solid_list))
 	{
 		y = y + sign(vsp);
 	}
@@ -206,10 +221,15 @@ else
 	
 }
 if (hsp != 0 ) image_xscale = sign(hsp);
-if (global.hp >= 0)
+if (global.hp <= 0)
 {
-	game_load("Labyrinth.ini");
+	global.lose = true;
+	if (global.lose)  
+	{
+		instance_create_layer(x,y,"Bullets",Ogameover);
+	}
 }
+
 if (global.snorkel = true) && tilemap_get_at_pixel(tiles,x,y) 
 {
 	global.state = characterstate.swimming;
@@ -220,40 +240,12 @@ if (global.snorkel = true) && tilemap_get_at_pixel(tiles,x,y)
 if (global.snorkel = false) && tilemap_get_at_pixel(tiles,x,y) 
 {
 	ini_open("Labyrinth.ini");
-			x = ini_read_real("player", "x", x);
-			y = ini_read_real("player", "y", y);
-			global.hp = ini_read_real("player", "hp", 3);
-			global.player_has_gun = ini_read_real("player", "playergun", false);
-			global.can_wall_jump = ini_read_real("player", "playerwalljump", false);
-			global.can_dash = ini_read_real("player", "playerdash", false);
-			global.can_doublejump = ini_read_real("player", "playerdoublejump", false);
-			global.redbullets = ini_read_real("player", "playerredbullet", false);
-			global.bullettype = ini_read_real("weapon", "weaponbullettype", false);
-			global.snorkel = ini_read_real("player", "playerwater", false);
-			global.ice_suit = ini_read_real("player", "playersuit", false);
-			global.prosuit = ini_read_real("player", "playerprosuit", false);
-			global.state = ini_read_real("player", "playerstate", characterstate.normal);
-			ini_close();
+	x = ini_read_real("player", "x", 0);
+	y = ini_read_real("player", "y", 0);
+	checkpoint_load();
+	ini_close();
 }
-if (global.snorkel = true) & global.lavaproofsuit = false && tilemap_get_at_pixel(tiles4,x,y) 
-{
-	ini_open("Labyrinth.ini");
-			x = ini_read_real("player", "x", x);
-			y = ini_read_real("player", "y", y);
-			global.hp = ini_read_real("player", "hp", 3);
-			global.player_has_gun = ini_read_real("player", "playergun", false);
-			global.can_wall_jump = ini_read_real("player", "playerwalljump", false);
-			global.can_dash = ini_read_real("player", "playerdash", false);
-			global.can_doublejump = ini_read_real("player", "playerdoublejump", false);
-			global.redbullets = ini_read_real("player", "playerredbullet", false);
-			global.bullettype = ini_read_real("weapon", "weaponbullettype", false);
-			global.snorkel = ini_read_real("player", "playerwater", false);
-			global.ice_suit = ini_read_real("player", "playersuit", false);
-			global.prosuit = ini_read_real("player", "playerprosuit", false);
-			global.state = ini_read_real("player", "playerstate", characterstate.normal);
-			ini_close();
-			hp = hp -1;
-}
+
 if (global.snorkel = true) && (global.ice_suit = true) && tilemap_get_at_pixel(tiles2,x,y) 
 {
 	global.state = characterstate.swimming;
@@ -264,38 +256,19 @@ if (global.snorkel = true) && (global.ice_suit = true) && tilemap_get_at_pixel(t
 if (global.snorkel = false) && (global.ice_suit = false) && tilemap_get_at_pixel(tiles2,x,y) 
 {
 	ini_open("Labyrinth.ini");
-			x = ini_read_real("player", "x", x);
-			y = ini_read_real("player", "y", y);
-			global.hp = ini_read_real("player", "hp", 3);
-			global.player_has_gun = ini_read_real("player", "playergun", false);
-			global.can_wall_jump = ini_read_real("player", "playerwalljump", false);
-			global.can_dash = ini_read_real("player", "playerdash", false);
-			global.can_doublejump = ini_read_real("player", "playerdoublejump", false);
-			global.redbullets = ini_read_real("player", "playerredbullet", false);
-			global.bullettype = ini_read_real("weapon", "weaponbullettype", false);
-			global.snorkel = ini_read_real("player", "playerwater", false);
-			global.ice_suit = ini_read_real("player", "playersuit", false);
-			global.prosuit = ini_read_real("player", "playerprosuit", false);
-			global.state = ini_read_real("player", "playerstate", characterstate.normal);
-			ini_close();
+	x = ini_read_real("player", "x", 0);
+	y = ini_read_real("player", "y", 0);
+	checkpoint_load();
+		ini_close();
 }
 if (global.snorkel = true) && (global.ice_suit = false) && tilemap_get_at_pixel(tiles2,x,y) 
 {
 	ini_open("Labyrinth.ini");
-			x = ini_read_real("player", "x", x);
-			y = ini_read_real("player", "y", y);
-			global.hp = ini_read_real("player", "hp", 3);
-			global.player_has_gun = ini_read_real("player", "playergun", false);
-			global.can_wall_jump = ini_read_real("player", "playerwalljump", false);
-			global.can_dash = ini_read_real("player", "playerdash", false);
-			global.can_doublejump = ini_read_real("player", "playerdoublejump", false);
-			global.redbullets = ini_read_real("player", "playerredbullet", false);
-			global.bullettype = ini_read_real("weapon", "weaponbullettype", false);
-			global.snorkel = ini_read_real("player", "playerwater", false);
-			global.ice_suit = ini_read_real("player", "playersuit", false);
-			global.prosuit = ini_read_real("player", "playerprosuit", false);
-			global.state = ini_read_real("player", "playerstate", characterstate.normal);
-			ini_close();
+	
+	x = ini_read_real("player", "x", 0);
+	y = ini_read_real("player", "y", 0);
+	checkpoint_load();
+		ini_close();
 }
 if (global.snorkel = true) && (global.prosuit = true) && tilemap_get_at_pixel(tiles3,x,y) 
 {
@@ -307,23 +280,13 @@ if (global.snorkel = true) && (global.prosuit = true) && tilemap_get_at_pixel(ti
 if (global.snorkel = false) && (global.prosuit = false) && tilemap_get_at_pixel(tiles3,x,y) 
 {
 	ini_open("Labyrinth.ini");
-			x = ini_read_real("player", "x", x);
-			y = ini_read_real("player", "y", y);
-			global.hp = ini_read_real("player", "hp", 3);
-			global.player_has_gun = ini_read_real("player", "playergun", false);
-			global.can_wall_jump = ini_read_real("player", "playerwalljump", false);
-			global.can_dash = ini_read_real("player", "playerdash", false);
-			global.can_doublejump = ini_read_real("player", "playerdoublejump", false);
-			global.redbullets = ini_read_real("player", "playerredbullet", false);
-			global.bullettype = ini_read_real("weapon", "weaponbullettype", false);
-			global.snorkel = ini_read_real("player", "playerwater", false);
-			global.ice_suit = ini_read_real("player", "playersuit", false);
-			global.prosuit = ini_read_real("player", "playerprosuit", false);
-			global.state = ini_read_real("player", "playerstate", characterstate.normal);
-			ini_close();
+	x = ini_read_real("player", "x", 0);
+	y = ini_read_real("player", "y", 0);
+	checkpoint_load();
+	ini_close();
 }
 }
-if (global.state = characterstate.swimming) && (in_water)
+if (global.state == characterstate.swimming) && (in_water)
 {
 	vsp = lerp(vsp, 0, 0.1);
 	sprite_index = spr_player_swim;
@@ -345,9 +308,9 @@ if (global.state = characterstate.swimming) && (in_water)
 	image_xscale = facing_dir;
 	direction = point_direction(x, y, x + move, y);
 }
-if (place_meeting(x+hsp,y, [ground1, ground2, ground3, ground4, Ograss]))
+if (place_meeting(x+hsp,y, solid_list))
 {
-	while (!place_meeting(x+sign(hsp),y, [ground1, ground2, ground3, ground4, Ograss]))
+	while (!place_meeting(x+sign(hsp),y,solid_list))
 	{
 		x = x + sign(hsp);
 	}
@@ -357,9 +320,9 @@ x = x + hsp;
 
 
 //Vertical Collison
-if (place_meeting(x,y+vsp, [ground1, ground2, ground3, ground4, Ograss]))
+if (place_meeting(x,y+vsp, solid_list))
 {
-	while (!place_meeting(x,y+sign(vsp), [ground1, ground2, ground3, ground4, Ograss]))
+	while (!place_meeting(x,y+sign(vsp), solid_list))
 	{
 		y = y + sign(vsp);
 	}
@@ -380,3 +343,4 @@ if (!tilemap_get_at_pixel(tiles,x,y) and (!tilemap_get_at_pixel(tiles2,x,y)) and
 }
 
 }
+show_debug_message(Ofinal_boss_phase3.state);

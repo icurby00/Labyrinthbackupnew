@@ -24,6 +24,7 @@
     {"name":"inst_23F5194D","path":"rooms/rm_stone/rm_stone.yy",},
     {"name":"inst_5E5FA002","path":"rooms/rm_stone/rm_stone.yy",},
     {"name":"inst_4C70131A","path":"rooms/rm_stone/rm_stone.yy",},
+    {"name":"inst_58123246","path":"rooms/rm_stone/rm_stone.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -41,6 +42,7 @@
         {"$GMRInstance":"v4","%Name":"inst_5EFF6735","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_5EFF6735","objectId":{"name":"Owarp","path":"objects/Owarp/Owarp.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":28.0,"x":5008.0,"y":2272.0,},
         {"$GMRInstance":"v4","%Name":"inst_21D49753","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_21D49753","objectId":{"name":"Ocheckpoint_inactive","path":"objects/Ocheckpoint_inactive/Ocheckpoint_inactive.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":3248.0,"y":3808.0,},
         {"$GMRInstance":"v4","%Name":"inst_4C70131A","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_4C70131A","objectId":{"name":"Ocheckpoint_inactive","path":"objects/Ocheckpoint_inactive/Ocheckpoint_inactive.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":4560.0,"y":1152.0,},
+        {"$GMRInstance":"v4","%Name":"inst_58123246","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_58123246","objectId":{"name":"Ohealthup","path":"objects/Ohealthup/Ohealthup.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1232.0,"y":3856.0,},
       ],"layers":[],"name":"Player","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Enemies","depth":400,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v4","%Name":"inst_5F4DD57B","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_5F4DD57B","objectId":{"name":"Oarea","path":"objects/Oarea/Oarea.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":39.0,"scaleY":11.0,"x":2496.0,"y":800.0,},

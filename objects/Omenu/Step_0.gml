@@ -46,6 +46,9 @@ function process_menu(_select,_hmove) {
 							global.snorkel = ini_read_real("player", "playerwater", false);
 							global.ice_suit = ini_read_real("player", "playersuit", false);
 							global.prosuit = ini_read_real("player", "playerprosuit", false);
+							global.lavaproofsuit = ini_read_real("player", "playerlavasuit",false);
+							global.minimap = ini_read_real("player", "playerminimap", false);
+							global.mapupdate = ini_read_real("player", "playermap", false);
 							global.state = ini_read_real("player", "playerstate", characterstate.normal);
 							global.bullettype = ini_read_real("weapon", "weaponbullettype", false);
 							global.Oboss_air = ini_read_real("boss", "bossair", 1);
@@ -91,7 +94,7 @@ function process_menu(_select,_hmove) {
 						//Sound
 						change_menu(_hmove, "sound");
 						audio_group_set_gain(audiogroup_default, global.dsm_settings[? "sound"][0]/10,0)
-						audio_play_sound(snd_effect,50,false);
+						audio_play_sound(snd_menu,50,false);
 					break;
 					case 1:
 						//Music
