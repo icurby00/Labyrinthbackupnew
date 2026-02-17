@@ -2,7 +2,8 @@
 // You can write your code in this editor
 if (hp <= 0)
 {
-	instance_change(Ohorror_brute_end_collective,true);
+	instance_destroy();
+	instance_create_layer(x,y,"Enemies",Ohorror_brute_end_collective);
 }
 
 

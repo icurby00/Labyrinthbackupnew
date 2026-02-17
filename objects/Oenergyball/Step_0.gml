@@ -1,5 +1,11 @@
 /// @description Insert description here
 // You can write your code in this editor
+if (global.lose) exit;
+
+if (!instance_exists(Oplayer))
+{
+	instance_destroy();
+}
 if (instance_exists(Oplayer))
 {
 	hsp += sign(Oplayer.x - x) * accel_force;
@@ -37,3 +43,6 @@ if (alarm[0] == -1)
 	alarm[0] = room_speed * 7;
 	
 }
+show_debug_message("speed = " + string(speed));
+show_debug_message("hsp = " + string(hsp));
+show_debug_message("vsp = " + string(vsp));

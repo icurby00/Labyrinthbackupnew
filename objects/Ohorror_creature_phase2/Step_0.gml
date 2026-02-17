@@ -42,7 +42,7 @@ switch(state)
 		if (alarm[1] == 0)
 		{
 		    alarm[1] = -1;
-		    state = HORROR_CREATURE_PHASE1.attack1;
+		    state = HORROR_CREATURE_PHASE2.attack1;
 		    break; // exit movement state early
 		}
 
@@ -240,7 +240,7 @@ switch(state)
 	alarm[1] = -1
     var dash_speed = 18;
 
-    // Apply horizontal movement only (no gravity, it’s a leap)
+    
     hsp = image_xscale * dash_speed;
 
     // Move forward
@@ -304,8 +304,7 @@ if (!on_ground || stuck_in_wall) {
 // If stuck longer than 60 steps (~1 sec)
 if (alarm[10] > 60)
 {
-    // Scan a grid around the boss horizontally and vertically for nearest ground spot
-    // We scan horizontally in steps of 8 pixels, vertically downwards in steps of 4 pixels
+    
     var scan_step_h = 8;
     var scan_step_v = 4;
     var closest_dist = 1000000; // large number
@@ -350,6 +349,6 @@ if (alarm[10] > 60)
         alarm[10] = -1; // reset stuck timer
     }
 }
-show_debug_message("Boss State2: " + string(state));
+
 
 	

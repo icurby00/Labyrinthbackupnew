@@ -134,6 +134,7 @@
     {"name":"inst_386DA765","path":"rooms/rm_gloomyforest3/rm_gloomyforest3.yy",},
     {"name":"inst_59CB4A19","path":"rooms/rm_gloomyforest3/rm_gloomyforest3.yy",},
     {"name":"inst_300E367","path":"rooms/rm_gloomyforest3/rm_gloomyforest3.yy",},
+    {"name":"inst_7A752CDA","path":"rooms/rm_gloomyforest3/rm_gloomyforest3.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -274,7 +275,11 @@
         {"$GMRInstance":"v4","%Name":"inst_3871811A","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3871811A","objectId":{"name":"Ograss","path":"objects/Ograss/Ograss.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1152.0,"y":608.0,},
         {"$GMRInstance":"v4","%Name":"inst_7F0A6A03","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_7F0A6A03","objectId":{"name":"Ograss","path":"objects/Ograss/Ograss.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":5.0,"x":608.0,"y":832.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
-    {"$GMRInstanceLayer":"","%Name":"Signs","depth":600,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"name":"Signs","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
+    {"$GMRInstanceLayer":"","%Name":"Signs","depth":600,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
+        {"$GMRInstance":"v4","%Name":"inst_7A752CDA","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_7A752CDA","objectId":{"name":"Ohorrorsign","path":"objects/Ohorrorsign/Ohorrorsign.yy",},"properties":[
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"Ohorrorsign","path":"objects/Ohorrorsign/Ohorrorsign.yy",},"propertyId":{"name":"text","path":"objects/Ohorrorsign/Ohorrorsign.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"\"LOG 140 \\n Seems everytime we lose someone here \\n they get taken to build this \\n mansion\"",},
+          ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":2544.0,"y":912.0,},
+      ],"layers":[],"name":"Signs","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRTileLayer":"","%Name":"Tiles_1","depth":700,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Tiles_1","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":47,"SerialiseWidth":188,"TileCompressedData":[
           -564,-2147483648,-55,12,1,13,-132,-2147483648,-55,23,1,24,-132,-2147483648,-55,23,1,24,-132,-2147483648,
           -55,23,1,27,-8,12,1,13,-123,-2147483648,-64,23,1,24,-123,-2147483648,-64,23,1,24,-123,-2147483648,-16,

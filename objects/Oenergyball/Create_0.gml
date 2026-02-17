@@ -17,3 +17,4 @@ GroundId3 = layer_get_id("Tiles_3");
 ground3 = layer_tilemap_get_id(GroundId3);
 GroundId4 = layer_get_id("Tiles_4");
 ground4 = layer_tilemap_get_id(GroundId4);
+show_debug_message("HORRORBALL CREATED");

@@ -2,6 +2,8 @@
 // You can write your code in this editor
 
 randomise();
+audio_group_load(audiomenu);
+audio_group_load(audiolevel);
 
 //character states
 enum characterstate
@@ -166,6 +168,59 @@ enum TURRET_BOSS
 	beam
 	
 }
+enum GRAVITY_BOT
+{
+	idle,
+	recovery,
+	attack1,
+	grav_incr,
+	attack2
+}
+enum FLOATING_ROBOT
+{
+	idle,
+	recovery,
+	ranged_attack1,
+	ranged_attack2,
+	bombardment,
+	change
+	
+}
+
+enum FINAL_BOSS_PHASE1
+{
+	idle,
+	recovery,
+	attack1,
+	attack2,
+	ranged_attack1,
+	ranged_attack2,
+	bombardment
+}
+enum FINAL_BOSS_PHASE2
+{
+	idle,
+	recovery,
+	attack1,
+	attack2,
+	ranged_attack1,
+	ranged_attack2,
+	bombardment,
+	charge
+}
+enum FINAL_BOSS_PHASE3
+{
+	idle,   //0
+	recovery, //1
+	attack1, //2
+	attack2, //3
+	ranged_attack1, //4
+	ranged_attack2,
+	ranged_attack3,
+	bombardment, //6
+	charge //7
+	
+}
 global.textspeed = 1;
 global.maxhp = 3;
 global.x = x;
@@ -190,6 +245,8 @@ global.levelchange = false;
 global.lose = false;
 global.cutscene = false;
 global.background_change = false;
+global.mapupdate = false;
+global.minimap = false;
 // weapon data
 global.bullettype = Obullet;
 // sequence states
@@ -205,6 +262,12 @@ enum cutscene_boss
 	Notplaying_scene,
 	Playing_scene,
 	Finished
+}
+enum ending_cutscene
+{
+	notplaying,
+	playing,
+	finished
 }
 global.triple_shot_done = 0;
 global.horror_collective = 3;
@@ -232,3 +295,21 @@ global.horror_creature_phase1 = 1;
 global.horror_creature_phase2 = 1;
 
 global.turret_boss = 1;
+
+global.grav_bot = 1;
+
+global.enemyhp = 800;
+global.floating_robot = 1;
+
+global.lava_walker1 = 0;
+global.lava_walker2 = 0;
+global.lava_walker3 = 0;
+
+global.lava_walker_complete = false;
+
+global.final_boss_phase1 = 1;
+global.final_boss_phase2 = 1;
+global.final_boss_phase3 = 1;
+
+global.mutate = false;
+global.secret_boss = 1;

@@ -92,6 +92,7 @@
     {"name":"inst_1585DB99","path":"rooms/rm_snow_to_spooky/rm_snow_to_spooky.yy",},
     {"name":"inst_3668EB6","path":"rooms/rm_snow_to_spooky/rm_snow_to_spooky.yy",},
     {"name":"inst_21263701","path":"rooms/rm_snow_to_spooky/rm_snow_to_spooky.yy",},
+    {"name":"inst_74679D9F","path":"rooms/rm_snow_to_spooky/rm_snow_to_spooky.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -190,11 +191,14 @@
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Signs","depth":600,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v4","%Name":"inst_6B74558B","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_6B74558B","objectId":{"name":"Ohorrorsign","path":"objects/Ohorrorsign/Ohorrorsign.yy",},"properties":[
-            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"Ohorrorsign","path":"objects/Ohorrorsign/Ohorrorsign.yy",},"propertyId":{"name":"text","path":"objects/Ohorrorsign/Ohorrorsign.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"\"Day 7780: Work is going well, \\n very well if only the \\n horizon stopped getting \\n darker\"",},
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"Ohorrorsign","path":"objects/Ohorrorsign/Ohorrorsign.yy",},"propertyId":{"name":"text","path":"objects/Ohorrorsign/Ohorrorsign.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"\"LOG 110: Work is going well, \\n very well if only the \\n horizon stopped getting \\n darker\"",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":-1.0,"scaleY":1.0,"x":2528.0,"y":1440.0,},
         {"$GMRInstance":"v4","%Name":"inst_1585DB99","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_1585DB99","objectId":{"name":"Ohorrorsign","path":"objects/Ohorrorsign/Ohorrorsign.yy",},"properties":[
-            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"Ohorrorsign","path":"objects/Ohorrorsign/Ohorrorsign.yy",},"propertyId":{"name":"text","path":"objects/Ohorrorsign/Ohorrorsign.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"\"Day : Default \\n Message Body: Default \\n Default Default \\n Hello New Person :)\"",},
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"Ohorrorsign","path":"objects/Ohorrorsign/Ohorrorsign.yy",},"propertyId":{"name":"text","path":"objects/Ohorrorsign/Ohorrorsign.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"\"LOG 1---5 : Default \\n Message Body: Default \\n Default Default \\n Hello\"",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1888.0,"y":1248.0,},
+        {"$GMRInstance":"v4","%Name":"inst_74679D9F","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_74679D9F","objectId":{"name":"Ohorrorsign","path":"objects/Ohorrorsign/Ohorrorsign.yy",},"properties":[
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"Ohorrorsign","path":"objects/Ohorrorsign/Ohorrorsign.yy",},"propertyId":{"name":"text","path":"objects/Ohorrorsign/Ohorrorsign.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"\"LOG 120 \\n Seems we lost someone to \\n this forest we need to investigate\"",},
+          ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1040.0,"y":800.0,},
       ],"layers":[],"name":"Signs","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRTileLayer":"","%Name":"Tiles_1","depth":700,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Tiles_1","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":50,"SerialiseWidth":94,"TileCompressedData":[
           -3506,-2147483648,3,22,23,24,-63,-2147483648,2,23,24,-23,-2147483648,7,22,23,23,39,58,38,24,-62,-2147483648,

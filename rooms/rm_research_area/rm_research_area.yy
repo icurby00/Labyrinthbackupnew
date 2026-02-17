@@ -26,6 +26,7 @@
     {"name":"inst_19C820A3","path":"rooms/rm_research_area/rm_research_area.yy",},
     {"name":"inst_6C3982BF","path":"rooms/rm_research_area/rm_research_area.yy",},
     {"name":"inst_7A05F423","path":"rooms/rm_research_area/rm_research_area.yy",},
+    {"name":"inst_1A161A3F","path":"rooms/rm_research_area/rm_research_area.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -57,7 +58,11 @@
         {"$GMRInstance":"v4","%Name":"inst_6C3982BF","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_6C3982BF","objectId":{"name":"Oturret","path":"objects/Oturret/Oturret.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":480.0,"y":1760.0,},
       ],"layers":[],"name":"Enemies","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Instances","depth":500,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
-    {"$GMRInstanceLayer":"","%Name":"Signs","depth":600,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"name":"Signs","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
+    {"$GMRInstanceLayer":"","%Name":"Signs","depth":600,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
+        {"$GMRInstance":"v4","%Name":"inst_1A161A3F","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_1A161A3F","objectId":{"name":"Odirtsign","path":"objects/Odirtsign/Odirtsign.yy",},"properties":[
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"Odirtsign","path":"objects/Odirtsign/Odirtsign.yy",},"propertyId":{"name":"text","path":"objects/Odirtsign/Odirtsign.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"\"LOG unknown Day unknown \\n There something wrong here \\n we sent another team before us and \\n nothing\"",},
+          ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":384.0,"y":288.0,},
+      ],"layers":[],"name":"Signs","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRTileLayer":"","%Name":"Tiles_1","depth":700,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Tiles_1","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":94,"SerialiseWidth":63,"TileCompressedData":[
           -315,-2147483648,-2,0,-61,-2147483648,-2,12,1,13,-60,-2147483648,-2,23,2,27,13,-59,-2147483648,-3,23,
           3,27,12,13,-57,-2147483648,-5,23,4,27,12,12,13,-54,-2147483648,-8,23,1,27,-8,12,1,13,-45,-2147483648,

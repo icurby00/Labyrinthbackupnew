@@ -18,6 +18,8 @@ switch (event_data[? "message"])
 		instance_activate_object(Oweapon);
 		instance_activate_object(pSigns);
 		instance_activate_object(Penemy_bullets);
+		instance_activate_object(Oenergyball);
+		instance_activate_object(pEnemy);
 		show_debug_message("Ogameover has stopped playing "+string(curSeq));
 	} break;
 }

@@ -1,3 +1,4 @@
 /// @description Insert description here
 // You can write your code in this editor
-instance_change(Ohorror_creature,true);
+instance_create_layer(x,y,"Enemies",Ohorror_creature);
+instance_destroy();

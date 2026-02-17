@@ -68,6 +68,7 @@
     {"name":"inst_6146086A","path":"rooms/rm_icy_area/rm_icy_area.yy",},
     {"name":"inst_6E6CFF3F","path":"rooms/rm_icy_area/rm_icy_area.yy",},
     {"name":"inst_3B74FFB6","path":"rooms/rm_icy_area/rm_icy_area.yy",},
+    {"name":"inst_103DA95B","path":"rooms/rm_icy_area/rm_icy_area.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -141,7 +142,11 @@
         {"$GMRInstance":"v4","%Name":"inst_6E6CFF3F","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_6E6CFF3F","objectId":{"name":"Oturret","path":"objects/Oturret/Oturret.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":3376.0,"y":10240.0,},
       ],"layers":[],"name":"Enemies","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Instances","depth":500,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
-    {"$GMRInstanceLayer":"","%Name":"Signs","depth":600,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"name":"Signs","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
+    {"$GMRInstanceLayer":"","%Name":"Signs","depth":600,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
+        {"$GMRInstance":"v4","%Name":"inst_103DA95B","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_103DA95B","objectId":{"name":"Oicesign","path":"objects/Oicesign/Oicesign.yy",},"properties":[
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"Oicesign","path":"objects/Oicesign/Oicesign.yy",},"propertyId":{"name":"text","path":"objects/Oicesign/Oicesign.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"\"ALERT \\n All surveyors please return to \\n landing area \\n hostile entities have been \\n detected \\n ALERT\"",},
+          ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":5056.0,"y":544.0,},
+      ],"layers":[],"name":"Signs","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRTileLayer":"","%Name":"Tiles_1","depth":700,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Tiles_1","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":375,"SerialiseWidth":188,"TileCompressedData":[
           -4,23,1,16,-7,34,1,35,-175,-2147483648,-2,23,3,16,34,35,-183,-2147483648,3,23,16,35,-185,-2147483648,
           2,23,24,-186,-2147483648,2,23,24,-186,-2147483648,2,23,24,-186,-2147483648,2,23,24,-186,-2147483648,

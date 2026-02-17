@@ -2,5 +2,6 @@
 // You can write your code in this editor
 if (hp <= 0)
 {
-	instance_change(Oenemy_human_horror_2,true);
+	instance_create_layer(x,y,"Enemies",Oenemy_human_horror_2);
+	instance_destroy();
 }

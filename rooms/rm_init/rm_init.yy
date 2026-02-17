@@ -10,6 +10,11 @@
     {"name":"inst_5ECCCB6B","path":"rooms/rm_init/rm_init.yy",},
     {"name":"inst_4996D163","path":"rooms/rm_init/rm_init.yy",},
     {"name":"inst_35E6B62","path":"rooms/rm_init/rm_init.yy",},
+    {"name":"inst_5769D30F","path":"roomui/RoomUI/RoomUI.yy",},
+    {"name":"inst_56EB051B","path":"roomui/RoomUI/RoomUI.yy",},
+    {"name":"inst_4FF57955","path":"roomui/RoomUI/RoomUI.yy",},
+    {"name":"inst_249729D6","path":"roomui/RoomUI/RoomUI.yy",},
+    {"name":"inst_2A5C5967","path":"roomui/RoomUI/RoomUI.yy",},
   ],
   "isDnd":false,
   "layers":[
