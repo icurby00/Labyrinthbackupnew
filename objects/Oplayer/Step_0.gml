@@ -343,3 +343,4 @@ if (!tilemap_get_at_pixel(tiles,x,y) and (!tilemap_get_at_pixel(tiles2,x,y)) and
 }
 
 }
+show_debug_message(Ofinal_boss_phase3.state);
