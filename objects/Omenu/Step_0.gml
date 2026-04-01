@@ -34,6 +34,7 @@ function process_menu(_select,_hmove) {
 							x = ini_read_real("player", "x", 0);
 							y = ini_read_real("player", "y", 0);
 							global.hp = ini_read_real("player", "hp", 3);
+							global.maxhp = ini_read_real("player", "maxhp", 3);
 							global.player_has_gun = ini_read_real("player", "playergun", false);
 							global.can_wall_jump = ini_read_real("player", "playerwalljump", false);
 							global.can_dash = ini_read_real("player", "playerdash", false);
@@ -46,12 +47,14 @@ function process_menu(_select,_hmove) {
 							global.snorkel = ini_read_real("player", "playerwater", false);
 							global.ice_suit = ini_read_real("player", "playersuit", false);
 							global.prosuit = ini_read_real("player", "playerprosuit", false);
+							global.lavaproofsuit = ini_read_real("player", "playerlavasuit",false);
+							global.minimap = ini_read_real("player", "minimap", false);
+							global.triple_shot = ini_read_real("player", "playershot",false);
+							global.mapupdate = ini_read_real("player", "playermap", false);
 							global.state = ini_read_real("player", "playerstate", characterstate.normal);
-							global.bullettype = ini_read_real("weapon", "weaponbullettype", false);
+							global.bullettype = ini_read_real("weapon", "weaponbullettype", Obullet);
 							global.Oboss_air = ini_read_real("boss", "bossair", 1);
 							global.Oboss_crusher = ini_read_real("boss", "bosscrusher", 1);
-							global.Oboss_phase1 = ini_read_real("boss", "bossphase1", 1);
-							global.Oboss_phase2 = ini_read_real("boss", "bossphase2", 1);
 							global.Oboss_phase3 = ini_read_real("boss", "bossphase3", 1);
 							global.Oboss_desert = ini_read_real("boss","desertboss", 1);
 							global.Oboss_horror = ini_read_real("boss", "horrorboss", 1);
@@ -63,13 +66,34 @@ function process_menu(_select,_hmove) {
 							global.horror_creature_phase1 = ini_read_real("boss","horrorcreaturephase1",1);
 							global.horror_creature_phase2 = ini_read_real("boss","horrorcreaturephase2",1);
 							global.turret_boss = ini_read_real("boss", "turretboss",1);
+							global.grav_bot = ini_read_real("boss", "gravbot",1);
+							global.floating_robot = ini_read_real("boss", "floatingrobot", 1);
+							global.final_boss_phase1 = ini_read_real("boss", "finalbossphase1", 1)
+							global.final_boss_phase2 = ini_read_real("boss", "finalbossphase2", 1)
+							global.final_boss_phase3 = ini_read_real("boss", "finalbossphase3", 1)
+							global.secret_boss = ini_read_real("boss", "secretboss",1);
 							global.levelchange = ini_read_real("level","levelchange",false);
+							global.unlockdoor = ini_read_real("level", "unlock", false);
 							global.currentroom = ini_read_real("room", "room", rm_grassland);
 			
 							ini_close();
 							room_goto(global.currentroom);
 							instance_create_layer(x,y,"Player",Oplayer);
+							if (global.minimap) 
+							{
+								if (!instance_exists(Omini_map))
+								{
+									instance_create_layer(x,y,"Player",Omini_map)
+									with (Omini_map)
+									{
+										visible = true;
+									}
+								}
+							}
+							if (global.player_has_gun)
+							{
 							instance_create_layer(x,y,"Weapon",Oweapon);
+							}
 						}
 						break;
 					
@@ -91,7 +115,7 @@ function process_menu(_select,_hmove) {
 						//Sound
 						change_menu(_hmove, "sound");
 						audio_group_set_gain(audiogroup_default, global.dsm_settings[? "sound"][0]/10,0)
-						audio_play_sound(snd_effect,50,false);
+						audio_play_sound(snd_menu,50,false);
 					break;
 					case 1:
 						//Music

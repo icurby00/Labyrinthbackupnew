@@ -14,6 +14,7 @@ if (global.cutscene = true && sequenceState = cutscene_boss.Notplaying_scene)
 	instance_deactivate_object(Oplayer);
 	instance_deactivate_object(Oweapon);
 	instance_deactivate_object(pSigns);
+	instance_deactivate_object(Omini_map);
 	view_set_visible(1,true);
 
 	if (alarm[0] == -1) {

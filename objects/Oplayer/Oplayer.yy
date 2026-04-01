@@ -26,6 +26,8 @@
     {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"Obuzzsaw","path":"objects/Obuzzsaw/Obuzzsaw.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"Orobot_boss_flame_bullet","path":"objects/Orobot_boss_flame_bullet/Orobot_boss_flame_bullet.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"Orobot_death_1","path":"objects/Orobot_death_1/Orobot_death_1.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"Olava_walker_complete","path":"objects/Olava_walker_complete/Olava_walker_complete.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"Obeam","path":"objects/Obeam/Obeam.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"Oplayer",

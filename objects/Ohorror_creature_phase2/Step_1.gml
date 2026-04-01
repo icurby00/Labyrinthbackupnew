@@ -7,7 +7,7 @@ if (hp <= 0)
 	global.horror_creature_phase2 = 0;
 }
 
-if global.horror_creature_phase2 = 0
+if global.horror_creature_phase2 == 0
 {
 	instance_destroy();
 }

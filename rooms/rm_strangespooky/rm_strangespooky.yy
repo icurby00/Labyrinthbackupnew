@@ -538,6 +538,7 @@
     {"name":"inst_4C49062","path":"rooms/rm_strangespooky/rm_strangespooky.yy",},
     {"name":"inst_45817F37","path":"rooms/rm_strangespooky/rm_strangespooky.yy",},
     {"name":"inst_430CB659","path":"rooms/rm_strangespooky/rm_strangespooky.yy",},
+    {"name":"inst_4F88DE40","path":"rooms/rm_strangespooky/rm_strangespooky.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -1085,6 +1086,7 @@
         {"$GMRInstance":"v4","%Name":"inst_C9C3F11","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_C9C3F11","objectId":{"name":"Ohorrorsign","path":"objects/Ohorrorsign/Ohorrorsign.yy",},"properties":[
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"Ohorrorsign","path":"objects/Ohorrorsign/Ohorrorsign.yy",},"propertyId":{"name":"text","path":"objects/Ohorrorsign/Ohorrorsign.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"\"This area should be easy to get through \\n there should be a path to other areas try looking around\"",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":4800.0,"y":1472.0,},
+        {"$GMRInstance":"v4","%Name":"inst_4F88DE40","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_4F88DE40","objectId":{"name":"Ocheckpoint_inactive","path":"objects/Ocheckpoint_inactive/Ocheckpoint_inactive.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":176.0,"y":1504.0,},
       ],"layers":[],"name":"Signs","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRTileLayer":"","%Name":"Tiles_1","depth":700,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Tiles_1","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":95,"SerialiseWidth":157,"TileCompressedData":[
           -92,-2147483648,8,22,23,16,34,34,17,23,24,-27,-2147483648,2,22,24,-120,-2147483648,8,22,23,24,-2147483648,

@@ -1,6 +1,12 @@
 {
   "$GMMacOptions":"",
   "%Name":"macOS",
+  "ConfigValues":{
+    "Window":{
+      "option_mac_icon_png":"icons/1024.png",
+      "option_mac_installer_background_png":"splash/installer_background.png",
+    },
+  },
   "name":"macOS",
   "option_mac_allow_fullscreen":false,
   "option_mac_allow_incoming_network":false,

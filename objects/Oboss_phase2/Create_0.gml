@@ -7,7 +7,7 @@ walkspd = 3;
 hsp = walkspd;
 hp = 65;
 flash = 0;
-energy = 15;
+energy = 5;
 
 state = boss_phase2.waiting;
 GroundId1 = layer_get_id("Tiles_1")

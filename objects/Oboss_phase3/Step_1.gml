@@ -12,7 +12,11 @@ if (global.Oboss_phase3 = 0)
 	instance_create_layer(x,y,"Player",Oprosuit);
 	
 }
-if (!instance_exists(Oboss_phase3) && global.Oboss_phase2 = 0)
+if (!instance_exists(Oboss_phase3) && global.Oboss_phase2 == 0)
 {
 	instance_destroy(Oenergyball);
+}
+if global.Oboss_phase3 == 0
+{
+	instance_destroy();
 }

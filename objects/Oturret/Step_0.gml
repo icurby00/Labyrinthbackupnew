@@ -12,11 +12,11 @@ switch(state)
 	}
 	case horrorturret.attack:
 	{
-		if (energy == 0) energy = 5
+		if (energy == 0) energy = 3
 		
         if (alarm[1] == -1)
         {
-			sprite_index = spr_horrorturret;
+			sprite_index = spr_turret;
             alarm[1] = room_speed * 3;
             energy--;
         }

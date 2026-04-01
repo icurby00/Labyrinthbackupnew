@@ -3,5 +3,10 @@
 if (hp <= 0)
 {
 	global.Oboss_air = 0;
-	instance_change(Ohealthup,true);
+	instance_create_layer(1840,1968,"Player",Ohealthup);
+}
+if (global.Oboss_air == 0 )
+{
+	instance_destroy();
+	
 }

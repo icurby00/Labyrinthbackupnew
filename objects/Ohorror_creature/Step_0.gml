@@ -46,6 +46,7 @@ switch(state)
 		    break; // exit movement state early
 		}
 
+
         // Wall climb detection
         if (place_meeting(x + image_xscale * 4, y, [ground1, ground2, ground3, ground4, Ograss]))
         {
@@ -67,7 +68,7 @@ switch(state)
         }
 
         if (hsp != 0) image_xscale = sign(hsp);
-
+		
 	}break;
 	
 	case HORROR_CREATURE_PHASE1.attack1:
@@ -149,7 +150,7 @@ switch(state)
 		alarm[1] = -1
 		move1()
 		if (hsp != 0 ) image_xscale = sign(hsp);
-		hp = hp + 10;
+		hp = hp + 30;
 		if (alarm[2] == -1)
 		{
 			alarm[2] = room_speed * 2;
@@ -175,7 +176,7 @@ switch(state)
         else
         {
             // Climb down if touching ceiling or stuck
-            if (place_meeting(x, y - 30, [ground1, ground2, ground3, ground4, Ograss]))
+            if (place_meeting(x, y - 16, [ground1, ground2, ground3, ground4, Ograss]))
             {
                 y += 16;
                 if (!place_meeting(x + image_xscale * 16, y, [ground1, ground2, ground3, ground4, Ograss]))
@@ -184,7 +185,6 @@ switch(state)
                 }
             }
         }
-
 
 	}break;
 	
@@ -240,7 +240,7 @@ switch(state)
 	alarm[1] = -1
     var dash_speed = 18;
 
-    // Apply horizontal movement only (no gravity, it’s a leap)
+    
     hsp = image_xscale * dash_speed;
 
     // Move forward
@@ -304,8 +304,7 @@ if (!on_ground || stuck_in_wall) {
 // If stuck longer than 60 steps (~1 sec)
 if (alarm[10] > 60)
 {
-    // Scan a grid around the boss horizontally and vertically for nearest ground spot
-    // We scan horizontally in steps of 8 pixels, vertically downwards in steps of 4 pixels
+    
     var scan_step_h = 8;
     var scan_step_v = 4;
     var closest_dist = 1000000; // large number
@@ -351,5 +350,5 @@ if (alarm[10] > 60)
     }
 }
 
-show_debug_message("Boss State: " + string(state));
+
 	

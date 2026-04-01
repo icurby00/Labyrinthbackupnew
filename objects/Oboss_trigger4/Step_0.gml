@@ -10,7 +10,10 @@ if (place_meeting(x,y,Oplayer))
 		}
 	}
 }
-
+if (instance_exists(Ohorror_boss_phase1))
+{
+	instance_destroy(Oboss_trigger4);
+}
 
 
 

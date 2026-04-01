@@ -12,7 +12,7 @@ switch (state)
 
 	case boss_phase3.shooting:
 	{
-		if (energy == 0) energy = 20
+		if (energy == 0) energy = 5
 		
         if (alarm[1] == -1)
         {

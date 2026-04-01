@@ -41,7 +41,7 @@ else
 	}
 	case boss_phase2.shooting:
 	{
-	if (energy == 0) energy = 15
+	if (energy == 0) energy = 5
 		
         if (alarm[2] == -1)
         {

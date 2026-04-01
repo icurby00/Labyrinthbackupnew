@@ -7,6 +7,7 @@ hsp = walkspd;
 hp = 1200;
 flash = 0;
 facing_dir = 1;
+energy = 3;
 state = BOSS_ROBOT_WORM_PHASE3.idle;
 GroundId1 = layer_get_id("Tiles_1")
 ground1  = layer_tilemap_get_id(GroundId1);

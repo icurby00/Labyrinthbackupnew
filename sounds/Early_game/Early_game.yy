@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":16.0,
+  "duration":27.428572,
   "exportDir":"",
   "name":"Early_game",
   "parent":{

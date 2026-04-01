@@ -12,6 +12,7 @@
     {"name":"inst_10845825","path":"rooms/rm_surface_lava3/rm_surface_lava3.yy",},
     {"name":"inst_58FDE279","path":"rooms/rm_surface_lava3/rm_surface_lava3.yy",},
     {"name":"inst_1798C490","path":"rooms/rm_surface_lava3/rm_surface_lava3.yy",},
+    {"name":"inst_57E60CC6","path":"rooms/rm_surface_lava3/rm_surface_lava3.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -24,6 +25,7 @@
         {"$GMRInstance":"v4","%Name":"inst_10845825","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_10845825","objectId":{"name":"Owarp","path":"objects/Owarp/Owarp.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":10.0,"x":16.0,"y":4768.0,},
         {"$GMRInstance":"v4","%Name":"inst_58FDE279","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_58FDE279","objectId":{"name":"Owarp","path":"objects/Owarp/Owarp.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":22.0,"scaleY":1.0,"x":2720.0,"y":0.0,},
         {"$GMRInstance":"v4","%Name":"inst_1798C490","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_1798C490","objectId":{"name":"Ocheckpoint_inactive","path":"objects/Ocheckpoint_inactive/Ocheckpoint_inactive.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":208.0,"y":4928.0,},
+        {"$GMRInstance":"v4","%Name":"inst_57E60CC6","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_57E60CC6","objectId":{"name":"Ocheckpoint_inactive","path":"objects/Ocheckpoint_inactive/Ocheckpoint_inactive.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":2512.0,"y":2368.0,},
       ],"layers":[],"name":"Player","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Enemies","depth":400,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"name":"Enemies","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Instances","depth":500,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
