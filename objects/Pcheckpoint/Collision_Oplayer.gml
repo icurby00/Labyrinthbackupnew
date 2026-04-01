@@ -18,12 +18,13 @@ ini_write_real("player", "playersuit", global.ice_suit);
 ini_write_real("player", "playerprosuit", global.prosuit);
 ini_write_real("player", "playerlavasuit", global.lavaproofsuit);
 ini_write_real("player", "playerminimap",global.minimap);
-ini_write_real("player", "playershot", global.triple_shot);
 ini_write_real("player", "playermap",global.mapupdate);
 ini_write_real("player", "playerstate", global.state);
 ini_write_real("weapon", "weaponbullettype", global.bullettype);
 ini_write_real("boss", "bossair", global.Oboss_air);
 ini_write_real("boss", "bosscrusher", global.Oboss_crusher);
+ini_write_real("boss", "bossphase1", global.Oboss_phase1);
+ini_write_real("boss", "bossphase2", global.Oboss_phase2);
 ini_write_real("boss", "bossphase3", global.Oboss_phase3);
 ini_write_real("boss","desertboss", global.Oboss_desert);
 ini_write_real("boss", "horrorboss", global.Oboss_horror);
@@ -43,7 +44,7 @@ ini_write_real("boss", "finalbossphase3", global.final_boss_phase3);
 ini_write_real("boss", "secretboss", global.secret_boss);
 
 ini_write_real("level", "levelchange", global.levelchange);
-ini_write_real("level", "unlock", global.unlockdoor);
+
 ini_close();
 
 
