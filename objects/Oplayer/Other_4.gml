@@ -20,3 +20,4 @@ tiles3 = layer_tilemap_get_id(layerID3);
 solid_list = [ground1, ground2, ground3, ground4, Ograss];
 GroundId5 = layer_get_id("Lava");
 ground5 = layer_tilemap_get_id(GroundId5);
+grv = 0.3;
