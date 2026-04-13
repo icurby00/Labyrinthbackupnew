@@ -804,12 +804,12 @@
         {"name":"g_DistortTexture","type":2,"value":"_filter_underwater_noise_sprite",},
       ],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":94,"SerialiseWidth":313,"TileCompressedData":[
           -24807,-2147483648,1,11,-36,12,1,13,-275,-2147483648,1,22,-36,23,1,24,-275,-2147483648,1,22,-36,23,1,
-          24,-275,-2147483648,1,22,-36,23,1,24,-275,-2147483648,1,22,-36,23,1,24,-275,-2147483648,1,22,-36,23,
-          1,24,-275,-2147483648,1,22,-36,23,1,24,-275,-2147483648,1,22,-36,23,1,24,-275,-2147483648,1,22,-36,23,
-          1,24,-272,-2147483648,4,11,12,12,28,-36,23,1,24,-272,-2147483648,1,22,-39,23,1,24,-272,-2147483648,1,
-          22,-39,23,1,24,-272,-2147483648,1,22,-39,23,1,24,-145,-2147483648,1,11,-3,12,1,13,-122,-2147483648,1,
-          22,-39,23,1,24,-145,-2147483648,1,22,-3,23,1,24,-122,-2147483648,1,22,-39,23,1,24,-145,-2147483648,1,
-          22,-3,23,1,24,-45,-2147483648,
+          24,-275,-2147483648,1,22,-36,23,1,24,-275,-2147483648,1,22,-36,23,1,24,-145,-2147483648,-2,0,-128,-2147483648,
+          1,22,-36,23,1,24,-147,-2147483648,-6,0,-122,-2147483648,1,22,-36,23,1,24,-275,-2147483648,1,22,-36,23,
+          1,24,-275,-2147483648,1,22,-36,23,1,24,-272,-2147483648,4,11,12,12,28,-36,23,1,24,-272,-2147483648,1,
+          22,-39,23,1,24,-272,-2147483648,1,22,-39,23,1,24,-272,-2147483648,1,22,-39,23,1,24,-145,-2147483648,
+          1,11,-3,12,1,13,-122,-2147483648,1,22,-39,23,1,24,-145,-2147483648,1,22,-3,23,1,24,-122,-2147483648,
+          1,22,-39,23,1,24,-145,-2147483648,1,22,-3,23,1,24,-45,-2147483648,
         ],"TileDataFormat":1,},"tilesetId":{"name":"TS_dirty_water","path":"tilesets/TS_dirty_water/TS_dirty_water.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"$GMRTileLayer":"","%Name":"Water","depth":1000,"effectEnabled":true,"effectType":"_filter_underwater","gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Water","properties":[
         {"name":"g_Distort1Speed","type":0,"value":"0.01",},
@@ -887,7 +887,7 @@
   },
   "sequenceId":null,
   "views":[
-    {"hborder":32,"hport":480,"hspeed":-1,"hview":240,"inherit":false,"objectId":null,"vborder":32,"visible":true,"vspeed":-1,"wport":680,"wview":340,"xport":0,"xview":0,"yport":0,"yview":0,},
+    {"hborder":32,"hport":960,"hspeed":-1,"hview":480,"inherit":false,"objectId":null,"vborder":32,"visible":true,"vspeed":-1,"wport":1360,"wview":680,"xport":0,"xview":0,"yport":0,"yview":0,},
     {"hborder":32,"hport":768,"hspeed":-1,"hview":768,"inherit":false,"objectId":null,"vborder":32,"visible":false,"vspeed":-1,"wport":1366,"wview":1366,"xport":0,"xview":0,"yport":0,"yview":0,},
     {"hborder":32,"hport":768,"hspeed":-1,"hview":768,"inherit":false,"objectId":null,"vborder":32,"visible":false,"vspeed":-1,"wport":1366,"wview":1366,"xport":0,"xview":0,"yport":0,"yview":0,},
     {"hborder":32,"hport":768,"hspeed":-1,"hview":768,"inherit":false,"objectId":null,"vborder":32,"visible":false,"vspeed":-1,"wport":1366,"wview":1366,"xport":0,"xview":0,"yport":0,"yview":0,},

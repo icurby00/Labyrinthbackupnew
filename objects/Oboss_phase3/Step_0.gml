@@ -5,14 +5,14 @@ switch (state)
 	case boss_phase3.waiting:
 	{
 		if (alarm[0] == -1) {
-			alarm[0] = room_speed ;
+			alarm[0] = room_speed * 2;
 		}
 	
 	}
 
 	case boss_phase3.shooting:
 	{
-		if (energy == 0) energy = 20
+		if (energy == 0) energy = 5
 		
         if (alarm[1] == -1)
         {

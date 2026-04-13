@@ -17,6 +17,7 @@ switch (event_data[? "message"])
 		instance_activate_object(Oweapon);
 		instance_activate_object(pEnemy);
 		instance_activate_object(pSigns);
+		instance_activate_object(Omini_map);
 		view_set_visible(1,false);
 		show_debug_message("Ocutscene has stopped playing "+string(curSeq));
 			if room_exists(target_room)

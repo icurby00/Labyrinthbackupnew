@@ -1,6 +1,13 @@
 {
   "$GMtvOSOptions":"v1",
   "%Name":"tvOS",
+  "ConfigValues":{
+    "Window":{
+      "option_tvos_icon_400":"icons/400.png",
+      "option_tvos_icon_400_2x":"icons/400_2x.png",
+      "option_tvos_icon_1280":"icons/1280.png",
+    },
+  },
   "name":"tvOS",
   "option_tvos_build_number":0,
   "option_tvos_bundle_name":"com.company.game",

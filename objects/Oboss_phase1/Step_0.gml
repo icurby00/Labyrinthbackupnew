@@ -40,7 +40,7 @@ else
 	
 	
 	case boss_phase1.shooting: {
-		if (energy == 0) energy = 10
+		if (energy == 0) energy = 4
 		
         if (alarm[3] == -1)
         {

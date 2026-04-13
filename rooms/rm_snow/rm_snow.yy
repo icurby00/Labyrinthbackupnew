@@ -243,10 +243,10 @@
         {"name":"g_AddCol","type":1,"value":"#FF331900",},
         {"name":"g_DistortTexture","type":2,"value":"_filter_underwater_noise_sprite",},
       ],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":38,"SerialiseWidth":219,"TileCompressedData":[
-          -6139,-2147483648,1,11,-42,12,1,13,-175,-2147483648,1,22,-42,23,1,24,-175,-2147483648,1,22,-42,23,2,
-          27,13,-174,-2147483648,1,22,-43,23,1,24,-174,-2147483648,1,22,-43,23,1,24,-174,-2147483648,1,22,-43,
-          23,4,27,12,12,13,-171,-2147483648,1,22,-46,23,1,24,-171,-2147483648,1,22,-46,23,1,24,-171,-2147483648,
-          1,22,-46,23,1,24,-171,-2147483648,1,22,-46,23,1,24,-164,-2147483648,
+          -5960,-2147483648,-5,0,-174,-2147483648,-45,0,-174,-2147483648,-45,0,-174,-2147483648,-45,0,-174,-2147483648,
+          -45,0,-174,-2147483648,-45,0,-174,-2147483648,-45,0,3,11,12,13,-170,-2147483648,-46,0,3,22,23,24,-170,
+          -2147483648,-46,0,3,22,23,24,-170,-2147483648,-46,0,3,22,23,24,-170,-2147483648,-46,0,3,22,23,24,-164,
+          -2147483648,
         ],"TileDataFormat":1,},"tilesetId":{"name":"TS_ice_water","path":"tilesets/TS_ice_water/TS_ice_water.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"$GMRTileLayer":"","%Name":"Water","depth":1000,"effectEnabled":true,"effectType":"_filter_underwater","gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Water","properties":[
         {"name":"g_Distort1Speed","type":0,"value":"0.01",},
@@ -279,7 +279,13 @@
         {"name":"g_TintCol","type":1,"value":"#FFFFCC7F",},
         {"name":"g_AddCol","type":1,"value":"#FF331900",},
         {"name":"g_DistortTexture","type":2,"value":"_filter_underwater_noise_sprite",},
-      ],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":38,"SerialiseWidth":219,"TileCompressedData":[-8322,-2147483648,],"TileDataFormat":1,},"tilesetId":{"name":"TS_dirty_water","path":"tilesets/TS_dirty_water/TS_dirty_water.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
+      ],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":38,"SerialiseWidth":219,"TileCompressedData":[
+          -5964,-2147483648,-5,0,-170,-2147483648,1,11,-42,12,1,13,-5,0,-170,-2147483648,1,22,-42,23,1,24,-5,0,
+          -170,-2147483648,1,22,-42,23,1,24,-5,0,-170,-2147483648,1,22,-42,23,1,24,-5,0,-170,-2147483648,1,22,
+          -42,23,1,24,-5,0,-165,-2147483648,1,11,-4,12,1,28,-42,23,1,24,-5,0,-165,-2147483648,1,22,-47,23,1,24,
+          -5,0,-165,-2147483648,1,22,-47,23,1,24,-4,0,-166,-2147483648,1,22,-47,23,1,24,-4,0,-166,-2147483648,
+          1,22,-47,23,1,24,-4,0,-164,-2147483648,
+        ],"TileDataFormat":1,},"tilesetId":{"name":"TS_dirty_water","path":"tilesets/TS_dirty_water/TS_dirty_water.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"$GMRInstanceLayer":"","%Name":"Signs","depth":1200,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"name":"Signs","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Doors","depth":1300,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"name":"Doors","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRTileLayer":"","%Name":"background_stone","depth":1400,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"background_stone","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":38,"SerialiseWidth":219,"TileCompressedData":[
@@ -315,7 +321,7 @@
   },
   "sequenceId":null,
   "views":[
-    {"hborder":32,"hport":480,"hspeed":-1,"hview":240,"inherit":false,"objectId":null,"vborder":32,"visible":true,"vspeed":-1,"wport":680,"wview":340,"xport":0,"xview":0,"yport":0,"yview":0,},
+    {"hborder":32,"hport":960,"hspeed":-1,"hview":480,"inherit":false,"objectId":null,"vborder":32,"visible":true,"vspeed":-1,"wport":1360,"wview":680,"xport":0,"xview":0,"yport":0,"yview":0,},
     {"hborder":32,"hport":768,"hspeed":-1,"hview":768,"inherit":false,"objectId":null,"vborder":32,"visible":false,"vspeed":-1,"wport":1366,"wview":1366,"xport":0,"xview":0,"yport":0,"yview":0,},
     {"hborder":32,"hport":768,"hspeed":-1,"hview":768,"inherit":false,"objectId":null,"vborder":32,"visible":false,"vspeed":-1,"wport":1366,"wview":1366,"xport":0,"xview":0,"yport":0,"yview":0,},
     {"hborder":32,"hport":768,"hspeed":-1,"hview":768,"inherit":false,"objectId":null,"vborder":32,"visible":false,"vspeed":-1,"wport":1366,"wview":1366,"xport":0,"xview":0,"yport":0,"yview":0,},

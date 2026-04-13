@@ -12,7 +12,7 @@ switch(state)
 	}
 	case horrorturret.attack:
 	{
-		if (energy == 0) energy = 15
+		if (energy == 0) energy = 2
 		
         if (alarm[1] == -1)
         {

@@ -2,9 +2,9 @@
 // You can write your code in this editor
 vsp = 0;
 grv = 0.3;
-walkspd = 3;
+walkspd = 2.5;
 hsp = walkspd;
-hp = 12;
+hp = 6;
 flash = 0;
 GroundId1 = layer_get_id("Tiles_1")
 ground1  = layer_tilemap_get_id(GroundId1);

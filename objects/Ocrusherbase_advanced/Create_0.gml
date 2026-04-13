@@ -5,7 +5,7 @@ hsp = 0;
 grv = 1;
 hp = 30;
 flash = 0;
-
+walkspd = 0;
 state = crusherstate.waiting;
 GroundId1 = layer_get_id("Tiles_1")
 ground1  = layer_tilemap_get_id(GroundId1);
