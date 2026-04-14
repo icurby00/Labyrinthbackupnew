@@ -22,7 +22,7 @@ else if global.lavaproofsuit == false && place_meeting(x,y,ground5)
 mv_left = keyboard_check(vk_left) || keyboard_check(ord("A"));
 mv_right = keyboard_check(vk_right) || keyboard_check(ord("D"));
 jumpup = keyboard_check_pressed(vk_space) || keyboard_check_pressed(ord("W")) || keyboard_check_pressed(vk_up);
-dashing = global.can_dash and (keyboard_check_pressed(ord("X"))) or mouse_check_button_pressed(mb_right);
+dashing = global.can_dash and ((keyboard_check_pressed(ord("X"))) or mouse_check_button_pressed(mb_right));
 onground = place_meeting(x,y+1, solid_list);
 onwall = place_meeting(x+1,y, solid_list) - place_meeting(x-1,y, solid_list);
 var move = mv_right - mv_left;
