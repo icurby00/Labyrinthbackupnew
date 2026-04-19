@@ -11,17 +11,19 @@ switch(state)
 	}break;
 	case ROBOT_FLAME.movement:
 	{
-		walkspd = 7;
+		walkspd = 4;
 		// collide
-		if (place_meeting(x+hsp,y,[ground1, ground2, ground3, ground4, Ograss]) or (place_meeting(x+hsp,y,Oenemyblock)))
+	
+		if (hsp != 0 && (place_meeting(x+hsp,y,[ground1, ground2, ground3, ground4, Ograss]) or (place_meeting(x+hsp,y,Oenemyblock))))
 		{
-			while (!place_meeting(x+sign(hsp),y,[ground1, ground2, ground3, ground4, Ograss]) and (!place_meeting(x+sign(hsp),y,Oenemyblock)))
+			while (hsp != 0 &&  (!place_meeting(x+sign(hsp),y,[ground1, ground2, ground3, ground4, Ograss]) and (!place_meeting(x+sign(hsp),y,Oenemyblock))))
 			{
 				x = x + sign(hsp);
 			}
 			hsp = -hsp;
 		}
 		x = x + hsp;
+
 		
 		if (hsp != 0 ) image_xscale = sign(hsp);
 		if (alarm[2] == -1) {
@@ -54,12 +56,12 @@ vsp = vsp + grv;
 
 
 		//Vertical Collison
-		if (place_meeting(x,y+vsp,[ground1, ground2, ground3, ground4, Ograss]))
-		{
-			while (!place_meeting(x,y+sign(vsp),[ground1, ground2, ground3, ground4, Ograss]))
-			{
-				y = y + sign(vsp);
-			}
-			vsp = 0;
-		}
-		y = y + vsp;
+if (vsp != 0 && place_meeting(x,y+vsp,[ground1, ground2, ground3, ground4, Ograss]))
+{
+	while (vsp != 0 &&(!place_meeting(x,y+sign(vsp),[ground1, ground2, ground3, ground4, Ograss])))
+	{
+		y = y + sign(vsp);
+	}
+	vsp = 0;
+}
+y = y + vsp;

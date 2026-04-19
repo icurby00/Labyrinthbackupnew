@@ -55,25 +55,29 @@ else
 		
 
 	
-if (place_meeting(x+hsp,y, [ground1, ground2, ground3, ground4, Ograss]))
-{
-	while (!place_meeting(x+sign(hsp),y, [ground1, ground2, ground3, ground4, Ograss]))
+	// collide
+	if (hsp != 0 && (place_meeting(x+hsp,y,[ground1, ground2, ground3, ground4, Ograss]) or (place_meeting(x+hsp,y,Oenemyblock))))
 	{
-		x = x + sign(hsp);
+		while (hsp != 0 &&  (!place_meeting(x+sign(hsp),y,[ground1, ground2, ground3, ground4, Ograss]) and (!place_meeting(x+sign(hsp),y,Oenemyblock))))
+		{
+			x = x + sign(hsp);
+		}
+		hsp = -hsp;
 	}
-	hsp = -hsp;
-}
-x = x + hsp;
+	x = x + hsp;
 
-if (place_meeting(x,y+vsp,[ground1, ground2, ground3, ground4, Ograss]))
-{
-	while (!place_meeting(x,y+sign(vsp),[ground1, ground2, ground3, ground4, Ograss]))
+
+	//Vertical Collison
+	if (vsp != 0 && place_meeting(x,y+vsp,[ground1, ground2, ground3, ground4, Ograss]))
 	{
-		y = y + sign(vsp);
+		while (vsp != 0 &&(!place_meeting(x,y+sign(vsp),[ground1, ground2, ground3, ground4, Ograss])))
+		{
+			y = y + sign(vsp);
+		}
+		vsp = 0;
 	}
-	vsp = 0;
-}
-y = y + vsp;
+	y = y + vsp;
+
 if (hsp != 0 ) image_xscale = sign(hsp);
 	if (alarm[2] == -1) {
 			alarm[2] = room_speed * 2;
@@ -83,25 +87,29 @@ if (hsp != 0 ) image_xscale = sign(hsp);
 	case BOSS_ROBOT_WORM_PHASE2.attack2:
 	{
 		
-		if (place_meeting(x+hsp,y, [ground1, ground2, ground3, ground4, Ograss]))
+			// collide
+	if (hsp != 0 && (place_meeting(x+hsp,y,[ground1, ground2, ground3, ground4, Ograss]) or (place_meeting(x+hsp,y,Oenemyblock))))
 	{
-	while (!place_meeting(x+sign(hsp),y, [ground1, ground2, ground3, ground4, Ograss]))
-	{
-		x = x + sign(hsp);
-	}
-	hsp = -hsp;
+		while (hsp != 0 &&  (!place_meeting(x+sign(hsp),y,[ground1, ground2, ground3, ground4, Ograss]) and (!place_meeting(x+sign(hsp),y,Oenemyblock))))
+		{
+			x = x + sign(hsp);
+		}
+		hsp = -hsp;
 	}
 	x = x + hsp;
 
-	if (place_meeting(x,y+vsp,[ground1, ground2, ground3, ground4, Ograss]))
+
+	//Vertical Collison
+	if (vsp != 0 && place_meeting(x,y+vsp,[ground1, ground2, ground3, ground4, Ograss]))
 	{
-	while (!place_meeting(x,y+sign(vsp),[ground1, ground2, ground3, ground4, Ograss]))
-	{
-		y = y + sign(vsp);
-	}
-	vsp = 0;
+		while (vsp != 0 &&(!place_meeting(x,y+sign(vsp),[ground1, ground2, ground3, ground4, Ograss])))
+		{
+			y = y + sign(vsp);
+		}
+		vsp = 0;
 	}
 	y = y + vsp;
+
 	if (hsp != 0 ) image_xscale = sign(hsp);
 		
 		if (alarm[6] == -1) {
@@ -116,18 +124,10 @@ if (hsp != 0 ) image_xscale = sign(hsp);
 		
 		if (alarm[4] == -1) {
 			alarm[4] = room_speed * 5;
-		
-		
-		
-		
-	}break;
+		}
 	
 	
-	
-	
-	
-	
-}
+}break;
 
 
 

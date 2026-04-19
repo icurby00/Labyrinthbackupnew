@@ -12,26 +12,16 @@ switch(state)
 	}
 	case horrorturret.attack:
 	{
-		if (energy == 0) energy = 5
+		if (energy == 0) energy = 3
 		
         if (alarm[1] == -1)
         {
-			sprite_index = spr_horrorturret;
+			sprite_index = spr_turret;
             alarm[1] = room_speed * 3;
             energy--;
         }
         if(energy == 0) state = horrorturret.idle;
 		
-	}
+	}break;
 }
 
-//Vertical Collison
-if (place_meeting(x,y+vsp,[ground1, ground2, ground3, ground4, Ograss]))
-{
-	while (!place_meeting(x,y+sign(vsp),[ground1, ground2, ground3, ground4, Ograss]))
-	{
-		y = y + sign(vsp);
-	}
-	vsp = 0;
-}
-y = y + vsp;

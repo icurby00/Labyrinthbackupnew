@@ -40,7 +40,7 @@ else
 	
 	
 	case boss_phase1.shooting: {
-		if (energy == 0) energy = 10
+		if (energy == 0) energy = 4
 		
         if (alarm[3] == -1)
         {
@@ -61,9 +61,9 @@ else
 if (hsp != 0 ) image_xscale = sign(hsp);
 vsp = vsp + grv;
 	// collide
-if (place_meeting(x+hsp,y,[ground1, ground2, ground3, ground4, Ograss]) or (place_meeting(x+hsp,y,Oenemyblock)))
+if (hsp != 0 && (place_meeting(x+hsp,y,[ground1, ground2, ground3, ground4, Ograss]) or (place_meeting(x+hsp,y,Oenemyblock))))
 {
-	while (!place_meeting(x+sign(hsp),y,[ground1, ground2, ground3, ground4, Ograss]) and (!place_meeting(x+sign(hsp),y,Oenemyblock)))
+	while (hsp != 0 &&  (!place_meeting(x+sign(hsp),y,[ground1, ground2, ground3, ground4, Ograss]) and (!place_meeting(x+sign(hsp),y,Oenemyblock))))
 	{
 		x = x + sign(hsp);
 	}
@@ -73,9 +73,9 @@ x = x + hsp;
 
 
 //Vertical Collison
-if (place_meeting(x,y+vsp,[ground1, ground2, ground3, ground4, Ograss]))
+if (vsp != 0 && place_meeting(x,y+vsp,[ground1, ground2, ground3, ground4, Ograss]))
 {
-	while (!place_meeting(x,y+sign(vsp),[ground1, ground2, ground3, ground4, Ograss]))
+	while (vsp != 0 &&(!place_meeting(x,y+sign(vsp),[ground1, ground2, ground3, ground4, Ograss])))
 	{
 		y = y + sign(vsp);
 	}

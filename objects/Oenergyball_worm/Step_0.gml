@@ -1,5 +1,11 @@
 /// @description Insert description here
 // You can write your code in this editor
+if (global.lose) exit;
+
+if (!instance_exists(Oplayer))
+{
+	instance_destroy();
+}
 if (instance_exists(Oplayer))
 {
 	hsp += sign(Oplayer.x - x) * accel_force;

@@ -28,7 +28,7 @@ sub_menu = 0;
 
 menu_x_pos = room_width * .5;
 menu_y_pos = room_height * .4;
-click_area_width = 40;
+click_area_width = 80;
 
 
 function button(_y, _wl, _wr, _h) constructor {

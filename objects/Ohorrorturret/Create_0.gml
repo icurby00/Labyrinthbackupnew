@@ -2,10 +2,10 @@
 // You can write your code in this editor
 vsp = 0;
 hsp = 0;
-grv = 1;
-hp = 20;
+grv = 0;
+hp = 12;
 flash = 0;
-energy = 5;
+energy = 2;
 walkspd = 0;
 state = horrorturret.idle;
 GroundId1 = layer_get_id("Tiles_1")

@@ -2,7 +2,7 @@
 // You can write your code in this editor
 vsp = 0;
 hsp = 0;
-grv = 1;
+grv = 0;
 hp = 10;
 flash = 0;
 energy = 3;

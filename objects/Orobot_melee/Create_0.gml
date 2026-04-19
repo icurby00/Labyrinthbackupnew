@@ -2,7 +2,7 @@
 // You can write your code in this editor
 vsp = 0;
 grv = 0.3;
-walkspd = 7;
+walkspd = 2.5;
 hsp = walkspd;
 hp = 25;
 flash = 0;

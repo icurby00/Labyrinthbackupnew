@@ -1,0 +1,65 @@
+/// @description Insert description here
+// You can write your code in this editor
+if place_meeting(x,y, Oplayer)
+{
+sprite_index = spr_savepoint_1;
+// Don't change
+global.currentroom = room;
+
+ini_open("Labyrinth.sav");
+ini_write_real("player", "x", other.x);
+ini_write_real("player", "y", other.y);
+ini_write_real("player", "hp", global.hp);
+ini_write_real("player", "maxhp", global.maxhp);
+ini_write_real("player", "playergun", global.player_has_gun);
+ini_write_real("player", "playerwalljump", global.can_wall_jump);
+ini_write_real("player", "playerdash", global.can_dash);
+ini_write_real("player", "playerdoublejump", global.can_doublejump);
+ini_write_real("player", "playerredbullet", global.redbullets);
+ini_write_real("player", "playergreenbullet", global.greenbullets);
+ini_write_real("player", "playericebullet", global.icebullets);
+ini_write_real("player", "playerplasmabullet", global.plasmabullets);
+ini_write_real("player", "playerwater", global.snorkel);
+ini_write_real("player", "playersuit", global.ice_suit);
+ini_write_real("player", "playerprosuit", global.prosuit);
+ini_write_real("player", "playerlavasuit", global.lavaproofsuit);
+ini_write_real("player", "minimap",global.minimap);
+ini_write_real("player", "playermap",global.mapupdate);
+ini_write_real("player", "playershot", global.triple_shot);
+ini_write_real("player", "playerstate", global.state);
+ini_write_real("weapon", "weaponbullettype", global.bullettype);
+ini_write_real("boss", "bossair", global.Oboss_air);
+ini_write_real("boss", "bosscrusher", global.Oboss_crusher);
+ini_write_real("boss", "bossphase3", global.Oboss_phase3);
+ini_write_real("boss","desertboss", global.Oboss_desert);
+ini_write_real("boss", "horrorboss", global.Oboss_horror);
+ini_write_real("boss", "horrorboss_phase1", global.Oboss_horror_phase1);
+ini_write_real("boss", "horrorboss_phase2", global.Oboss_horror_phase2);
+ini_write_real("boss", "robot_worm_phase1", global.worm_boss_phase1);
+ini_write_real("boss", "robot_worm_phase2", global.worm_boss_phase2);
+ini_write_real("boss", "robot_worm_phase3", global.worm_boss_phase3);
+ini_write_real("boss", "horrorcreaturephase1", global.horror_creature_phase1);
+ini_write_real("boss", "horrorcreaturephase2", global.horror_creature_phase2);
+ini_write_real("boss", "turretboss", global.turret_boss);
+ini_write_real("boss", "gravbot", global.grav_bot);
+ini_write_real("boss", "floatingrobot", global.floating_robot);
+ini_write_real("boss", "finalbossphase1", global.final_boss_phase1);
+ini_write_real("boss", "finalbossphase2", global.final_boss_phase2);
+ini_write_real("boss", "finalbossphase3", global.final_boss_phase3);
+ini_write_real("boss", "secretboss", global.secret_boss);
+
+ini_write_real("level", "levelchange", global.levelchange);
+ini_write_real("level", "unlock", global.unlockdoor);
+ini_write_real("room", "room", global.currentroom);
+
+ini_close(); 
+
+}
+else
+{
+	sprite_index = spr_savepoint;
+}
+
+
+
+

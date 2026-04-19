@@ -29,8 +29,8 @@ switch (state)
 	
 	case crusherstate.rising: {
 		
-		vsp += -grv;
-		vsp = clamp(vsp, -6, 0);
+		vsp -= grv;
+		vsp = clamp(vsp, -2, 0);
 		
 		if (place_meeting(x, y - 1, [ground1, ground2, ground3, ground4, Ograss])) state = crusherstate.waiting;
 		
@@ -41,13 +41,32 @@ switch (state)
 	
 	
 }
-//Vertical Collison
-if (place_meeting(x,y+vsp,[ground1, ground2, ground3, ground4, Ograss]))
+
+if (vsp > 0) 
 {
-	while (!place_meeting(x,y+sign(vsp),[ground1, ground2, ground3, ground4, Ograss]))
-	{
-		y = y + sign(vsp);
-	}
-	vsp = 0;
+ 
+    if (place_meeting(x, y + vsp, [ground1, ground2, ground3, ground4, Ograss]))
+    {
+       
+        while (!place_meeting(x, y + 1, [ground1, ground2, ground3, ground4, Ograss]))
+        {
+            y += 1;
+        }
+        vsp = 0;
+    }
 }
-y = y + vsp;
+else if (vsp < 0) 
+{
+   
+    if (place_meeting(x, y + vsp, [ground1, ground2, ground3, ground4, Ograss]))
+    {
+      
+        while (!place_meeting(x, y - 1, [ground1, ground2, ground3, ground4, Ograss]))
+        {
+            y -= 1;
+        }
+        vsp = 0;
+    }
+}
+
+y += vsp;

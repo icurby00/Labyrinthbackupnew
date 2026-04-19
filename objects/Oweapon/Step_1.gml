@@ -11,6 +11,7 @@ firing_delay =- 1;
 recoil = max(0,recoil - 1);
 if (mouse_check_button_pressed(mb_left)) && (global.player_has_gun == true) && (firing_delay < 0)
 {
+	audio_play_sound(snd_shoot,1000,0);
 	recoil = 4;
 	firing_delay = 5;
 	with (instance_create_layer(x-3,y+1.5,"Bullets",global.bullettype))

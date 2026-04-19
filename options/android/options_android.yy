@@ -1,6 +1,18 @@
 {
   "$GMAndroidOptions":"v1",
   "%Name":"Android",
+  "ConfigValues":{
+    "Window":{
+      "option_android_launchscreen_fill":"0",
+      "option_android_splashscreen_background_colour":"4278190080",
+      "option_android_icon_ldpi":"icons/ldpi.png",
+      "option_android_icon_mdpi":"icons/mdpi.png",
+      "option_android_icon_hdpi":"icons/hdpi.png",
+      "option_android_icon_xhdpi":"icons/xhdpi.png",
+      "option_android_icon_xxhdpi":"icons/xxhdpi.png",
+      "option_android_icon_xxxhdpi":"icons/xxxhdpi.png",
+    },
+  },
   "name":"Android",
   "option_android_application_tag_inject":"",
   "option_android_arch_arm64":true,

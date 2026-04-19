@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-if global.triple_shot = true
+if global.triple_shot == true
 {
-	instance_destroy();
+	instance_destroy(); 
 }

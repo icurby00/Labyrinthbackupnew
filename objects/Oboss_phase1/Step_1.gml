@@ -6,3 +6,8 @@ if (hp <= 0)
 	instance_change(Oboss_phase2,true);
 	
 }
+
+if global.Oboss_phase3 == 0
+{
+	instance_destroy();
+}
